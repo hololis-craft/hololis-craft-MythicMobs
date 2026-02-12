@@ -1,0 +1,16 @@
+# MythicMobs
+config/*
+data/*
+generation/*
+
+# dependencies
+node_modules/
+bun.lock
+
+# Git
+.github/workflows/*
+
+# VSCode
+.vscode/*
+
+coverage

@@ -1,0 +1,70 @@
+leapsphere:
+  Cooldown: 70
+  Skills:
+    - throw{velocity=8;velocityY=4} @EIR{r=4}
+    - potion{t=LEVITATION;d=30;l=4} @Self
+    - potion{t=DAMAGE_RESISTANCE;d=999999;l=10;force=true} @Self
+    - potion{t=SLOW;d=999999;l=10;force=true} @Self
+    - effect:glow{color=LIGHT_PURPLE;duration=999999} @self
+    - effect:sound{s=entity.wither.ambient;v=0.3;p=0.7} @PIR{r=60}
+    - effect:sound{s=entity.shulker.shoot;v=1;p=0.7} @PIR{r=60}
+    - effect:sound{s=entity.illusioner.prepare_mirror;v=1.0;p=2} @PIR{r=60}
+    - skill{s=preleapsphere;repeat=8;repeatInterval=5}
+    - delay 45
+    - skill{s=leapspheretick;repeat=6;repeatInterval=45}
+    - delay 250
+    - command{c=" effect clear @s minecraft:glowing";sudo=false} @self
+    - potion{t=DAMAGE_RESISTANCE;d=1;l=10;force=true} @Self
+    - potion{t=SLOW;d=1;l=10;force=true} @Self
+    - delay 120
+    - skill{s=suiseiskillselect}
+
+preleapsphere:
+  Skills:
+    - effect:particles{particle=witchMagic;amount=20;hS=0.5;vS=0.5;speed=0.1;y=1.2} @self
+    - effect:particles{particle=dust_color_transition;color1=#41DBFF;color2=#0000FF;size=1.5;amount=20;hS=0.5;vS=0.5;speed=0.1;y=1.2} @self
+    - effect:particles{particle=mobSpell;amount=20;hS=0.5;vS=0.5;speed=0.5;y=1.2;color=#41A0E7} @self
+    - effect:particles{particle=reddust;amount=20;hS=0.5;vS=0.5;speed=0.1;y=1.2;color=#41A085} @self
+
+leapspheretick:
+  Skills:
+    - potion{t=LEVITATION;d=30;l=1} @Self
+    - effect:sound{s=entity.illusioner.cast_spell;v=1;p=0.7} @PIR{r=60}
+    - effect:sound{s=entity.firework_rocket.large_blast;v=1;p=0.7} @PIR{r=30}
+    - leap{velocity=250} @target
+    - delay 30
+    - effect:sound{s=entity.evoker.prepare_summon;v=1.0;p=2} @PIR{r=60}
+    - effect:sound{s=entity.firework_rocket.twinkle_far;v=1.0;p=1.3} @PIR{r=60}
+    - damage{a=35;ia=true;ignoreenchants=true;preventimmunity=true;pk=true} @PIR{r=8}
+    - effect:particlesphere{particle=dust_color_transition;color1=#41DBFF;color2=#0000FF;size=1.3;amount=1200;radius=8} @self
+    - projectile{onTick=LSProTick;onHit=LSProHit;v=9;i=1;hR=1;vR=1;StopAtBlock=false;HitNonPlayers=true;g=-0.18;vO=-0.3} @target
+    - projectile{onTick=LSProTick;onHit=LSProHit;v=9;i=1;hR=1;vR=1;StopAtBlock=false;HitNonPlayers=true;g=-0.18;HorizontalOffset=16;vO=-0.3} @target
+    - projectile{onTick=LSProTick;onHit=LSProHit;v=9;i=1;hR=1;vR=1;StopAtBlock=false;HitNonPlayers=true;g=-0.18;HorizontalOffset=-16;vO=-0.3} @target
+    - projectile{onTick=LSProTick;onHit=LSProHit;v=9;i=1;hR=1;vR=1;StopAtBlock=false;HitNonPlayers=true;g=-0.18;HorizontalOffset=32;vO=-0.3} @target
+    - projectile{onTick=LSProTick;onHit=LSProHit;v=9;i=1;hR=1;vR=1;StopAtBlock=false;HitNonPlayers=true;g=-0.18;HorizontalOffset=-32;vO=-0.3} @target
+    - skill{s=leapspheretickRED}
+LSProTick:
+  Skills:
+    - effect:particles{p=endRod;amount=1;speed=0;hR=0.2;vR=0.2} @origin
+    - effect:particles{p=Soul_Fire_Flame;amount=2;speed=0;hR=0.2;vR=0.2;yOffset=0.15} @origin
+LSProHit:
+  Skills:
+    - damage{a=20;ia=true;ignoreenchants=true;preventimmunity=true;pk=true} @EntitiesNearOrigin{r=3}
+    - effect:sound{s=entity.ender_eye.death;v=1;p=2}
+
+leapspheretickRED:
+  Conditions:
+    - stance{stance=suisei-second-phase} true
+  Skills:
+    - projectile{onTick=LSProTickRED;onHit=LSProHitRED;v=9;i=1;hR=1;vR=1;StopAtBlock=false;HitNonPlayers=true;g=-0.18;HorizontalOffset=64;vO=-0.3} @target
+    - projectile{onTick=LSProTickRED;onHit=LSProHitRED;v=9;i=1;hR=1;vR=1;StopAtBlock=false;HitNonPlayers=true;g=-0.18;HorizontalOffset=-64;vO=-0.3} @target
+    - projectile{onTick=LSProTickRED;onHit=LSProHitRED;v=9;i=1;hR=1;vR=1;StopAtBlock=false;HitNonPlayers=true;g=-0.18;HorizontalOffset=96;vO=-0.3} @target
+    - projectile{onTick=LSProTickRED;onHit=LSProHitRED;v=9;i=1;hR=1;vR=1;StopAtBlock=false;HitNonPlayers=true;g=-0.18;HorizontalOffset=-96;vO=-0.3} @target
+
+LSProTickRED:
+  Skills:
+    - effect:particles{p=reddust;amount=1;speed=0;hR=0.2;vR=0.2;color=#de0004} @origin
+LSProHitRED:
+  Skills:
+    - damage{a=35;ia=true;ignoreenchants=true;preventimmunity=true;pk=true} @EntitiesNearOrigin{r=3}
+    - effect:sound{s=entity.zombie.infect;v=1;p=1.7}

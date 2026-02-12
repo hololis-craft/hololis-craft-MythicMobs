@@ -1,0 +1,21 @@
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 160,
+  "tabWidth": 2,
+  "useTabs": false,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "proseWrap": "never",
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": ["**/*.yml", "**/*.yaml"],
+      "options": {
+        "parser": "yaml",
+        "printWidth": 200
+      }
+    }
+  ]
+}

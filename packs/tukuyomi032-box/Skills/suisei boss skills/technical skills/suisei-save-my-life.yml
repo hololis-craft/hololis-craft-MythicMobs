@@ -1,0 +1,7 @@
+suiseisavemylife:
+  Conditions:
+    - stance{stance=suisei-second-phase-like} false
+    - stance{stance=suisei-second-phase} false
+  Skills:
+    - equip{item=totem_of_undying OFFHAND} @self
+    - effect:sound{s=item.armor.equip_generic;v=4;p=1} @PIR{r=60}

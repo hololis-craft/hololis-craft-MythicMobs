@@ -1,0 +1,44 @@
+dragontransformation:
+  Skills:
+    - throw{velocity=4;velocityY=0;repeat=20;repeatInterval=1} @PlayersInRadius{r=20}
+    - potion{t=SLOW;d=999999;l=10;force=true} @self
+    - potion{t=DAMAGE_RESISTANCE;d=999999;l=10;force=true} @self
+    - effect:itemspray{item=nether_star;amount=16;velocity=1.5;duration=30} @self
+    - effect:sound{s=block.respawn_anchor.deplete;v=1;p=2} @PIR{r=60}
+    - effect:sound{s=block.end_portal.spawn;v=1;p=1.7} @PIR{r=60}
+    - effect:sound{s=entity.firework_rocket.blast;v=1;p=0.5} @PIR{r=60}
+    - effect:sound{s=entity.ender_eye.death;v=1;p=0.5} @PIR{r=60}
+    - effect:particles{particle=flash;amount=1;hS=0;vS=0;speed=0;y=0.7} @self
+    - effect:glow{color=GOLD;duration=10} @self
+    - potion{t=INVISIBILITY;d=999999;l=10;force=true} @self
+    - potion{t=LEVITATION;d=999999;l=1;force=true} @self
+    - delay 10
+    - disguise{d=ender_dragon setGlowing setGlowColor BLUE}
+    - delay 30
+    - potion{t=LEVITATION;d=999999;l=1;force=true} @self
+    - skill{s=dragontransformationtick;repeat=6;repeatInterval=25}
+    - delay 175
+    - potion{t=LEVITATION;d=1;l=0;force=true} @self
+    - potion{t=INVISIBILITY;d=1;l=0;force=true} @self
+    - potion{t=SLOW;d=1;l=0;force=true} @self
+    - potion{t=DAMAGE_RESISTANCE;d=1;l=0;force=true} @self
+    - potion{t=GLOWING;d=1;l=0;force=true} @Self
+    - disguise{d=player &b&lすいちゃん setSkin SUISEI_HONMONO}
+    - effect:sound{s=entity.zombie.infect;v=1;p=2} @PIR{r=60}
+    - effect:sound{s=entity.wither.shoot;v=1;p=2} @PIR{r=60}
+    - leap{velocity=520} @target
+    - delay 120
+    - skill{s=suiseiskillselect}
+
+dragontransformationtick:
+  Skills:
+    - skill{s=dragontransformationdamagetick;repeat=10;repeatInterval=3}
+    - effect:sound{s=entity.ender_dragon.ambient;v=1;p=1.7} @PIR{r=60}
+    - effect:sound{s=entity.ender_dragon.flap;v=1;p=0.5} @PIR{r=60}
+    - effect:sound{s=block.ender_chest.open;v=1;p=0.5} @PIR{r=60}
+    - leap{velocity=450} @PIR{r=60;limit=1;sort=RANDOM}
+
+dragontransformationdamagetick:
+  Skills:
+    - effect:sound{s=entity.ender_dragon.hurt;v=0.3;p=2} @PIR{r=60}
+    - damage{a=1;ia=true;ignoreenchants=true;preventimmunity=true;pk=true} @PIR{r=5}

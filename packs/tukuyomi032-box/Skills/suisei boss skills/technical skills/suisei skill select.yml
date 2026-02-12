@@ -1,0 +1,12 @@
+suiseiskillselect:
+  Conditions:
+    - stance{stance=suisei-second-phase-like} false
+    - stance{stance=suisei-second-phase} false
+    - stance{stance=suisei-death} false
+  Skills:
+    - randomskill{skills=retroshoot,caughtrap,leapsphere,divinityport,strikewave1,dragontransformation}
+suiseisecondphaseskill:
+  Conditions:
+    - stance{stance=suisei-second-phase} true
+  Skills:
+    - randomskill{skills=leapsphere}

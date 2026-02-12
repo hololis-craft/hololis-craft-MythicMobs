@@ -1,0 +1,81 @@
+caughtrap:
+  Skills:
+    - effect:sound{s=entity.wither.shoot;v=1.0;p=2} @PlayersInRadius{r=60}
+    - leap{velocity=150} @Forward{f=-5;y=0.2}
+    - delay 10
+    - potion{t=SLOW;d=999999;l=10;force=true} @self
+    - potion{t=DAMAGE_RESISTANCE;d=999999;l=10;force=true} @self
+    - effect:sound{s=block.grass.place;v=1.0;p=0.7} @PlayersInRadius{r=60}
+    - effect:sound{s=entity.zombie.infect;v=1.0;p=2} @PlayersInRadius{r=60}
+    - prison{material=JUNGLE_LEAVES;radius=2;duration=100;breakable=true} @PlayersInRadius{r=10}
+    - potion{t=SLOW;d=135;l=9;force=true} @PlayersInRadius{r=10}
+    - delay 10
+    - skill{s=caughttrapcountdown1;repeat=12;repeatInterval=2}
+    - delay 22
+    - skill{s=caughttrapcountdown2;repeat=10;repeatInterval=2}
+    - delay 20
+    - skill{s=caughttrapcountdown3;repeat=10;repeatInterval=2}
+    - delay 18
+    - skill{s=caughttrapcountdown4;repeat=9;repeatInterval=2}
+    - delay 16
+    - skill{s=caughttrapcountdown5;repeat=8;repeatInterval=2}
+    - delay 14
+    - skill{s=caughttrapcountdown6;repeat=7;repeatInterval=2}
+    - delay 12
+    - skill{s=caughttrapcountdown7;repeat=6;repeatInterval=2}
+    - delay 10
+    - skill{s=caughttrapcountdown8;repeat=5;repeatInterval=2}
+    - delay 12
+    - sendactionmessage{m="&0&l&m-}*-&r &b&l------- &0&l&m-*{-"} @PlayersInRadius{r=60}
+    - effect:sound{s=entity.zombie.infect;v=1.0;p=0.7} @PIR{r=35}
+    - effect:sound{s=block.enchantment_table.use;v=1.0;p=0.1} @PIR{r=35}
+    - effect:sound{s=block.grass.place;v=0.7;p=0.5} @PlayersInRadius{r=60}
+    - damage{a=30;ia=true;ignoreenchants=true;preventimmunity=true;pk=true} @PIR{r=20}
+    - effect:particlebox{particle=Soul_Fire_Flame;amount=10;radius=10} @self
+    - effect:particlebox{particle=Instant_Effect;amount=100;radius=10;vS=1.3;hS=3} @self
+    - delay 10
+    - potion{t=SLOW;d=1;l=1;force=true} @self
+    - potion{t=DAMAGE_RESISTANCE;d=1;l=1;force=true} @self
+    - delay 180
+    - skill{s=suiseiskillselect}
+
+caughttrapcountdown1:
+  Skills:
+    - effect:sound{s=block.glass.break;v=0.3;p=2} @PlayersInRadius{r=60}
+    - sendactionmessage{m="&3&l&m }* &r &0&l------- &b&l&m *{ "} @PlayersInRadius{r=60}
+    - effect:particlebox{particle=Soul_Fire_Flame;amount=10;radius=10} @self
+caughttrapcountdown2:
+  Skills:
+    - effect:sound{s=block.glass.break;v=0.4;p=2} @PlayersInRadius{r=60}
+    - sendactionmessage{m="&3&l&m }* &r &3&l-&0&l------ &b&l&m *{ "} @PlayersInRadius{r=60}
+    - effect:particlebox{particle=Soul_Fire_Flame;amount=10;radius=10} @self
+caughttrapcountdown3:
+  Skills:
+    - effect:sound{s=block.glass.break;v=0.5;p=2} @PlayersInRadius{r=60}
+    - sendactionmessage{m="&3&l&m }* &r &3&l--&0&l----- &b&l&m *{ "} @PlayersInRadius{r=60}
+    - effect:particlebox{particle=Soul_Fire_Flame;amount=10;radius=10} @self
+caughttrapcountdown4:
+  Skills:
+    - effect:sound{s=block.glass.break;v=0.6;p=2} @PlayersInRadius{r=60}
+    - sendactionmessage{m="&3&l&m }* &r &3&l---&0&l---- &b&l&m *{ "} @PlayersInRadius{r=60}
+    - effect:particlebox{particle=Soul_Fire_Flame;amount=10;radius=10} @self
+caughttrapcountdown5:
+  Skills:
+    - effect:sound{s=block.glass.break;v=0.7;p=2} @PlayersInRadius{r=60}
+    - sendactionmessage{m="&3&l&m }* &r &3&l----&0&l--- &b&l&m *{ "} @PlayersInRadius{r=60}
+    - effect:particlebox{particle=Soul_Fire_Flame;amount=10;radius=10} @self
+caughttrapcountdown6:
+  Skills:
+    - effect:sound{s=block.glass.break;v=0.8;p=2} @PlayersInRadius{r=60}
+    - sendactionmessage{m="&3&l&m }* &r &3&l-----&0&l-- &b&l&m *{ "} @PlayersInRadius{r=60}
+    - effect:particlebox{particle=Soul_Fire_Flame;amount=10;radius=10} @self
+caughttrapcountdown7:
+  Skills:
+    - effect:sound{s=block.glass.break;v=1;p=2} @PlayersInRadius{r=60}
+    - sendactionmessage{m="&3&l&m }* &r &3&l------&0&l- &b&l&m *{ "} @PlayersInRadius{r=60}
+    - effect:particlebox{particle=Soul_Fire_Flame;amount=10;radius=10} @self
+caughttrapcountdown8:
+  Skills:
+    - effect:sound{s=block.glass.break;v=2;p=2} @PlayersInRadius{r=60}
+    - sendactionmessage{m="&3&l&m }* &r &3&l------- &b&l *{ "} @PlayersInRadius{r=60}
+    - effect:particlebox{particle=Soul_Fire_Flame;amount=10;radius=10} @self

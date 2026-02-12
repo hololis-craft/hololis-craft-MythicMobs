@@ -1,0 +1,9 @@
+CAVE_SPIDER:
+  Health: 12
+  Damage: 2
+WITHER_SKELETON:
+  Health: 20
+  Damage: 8
+GIANT:
+  Health: 100
+  Damage: 50

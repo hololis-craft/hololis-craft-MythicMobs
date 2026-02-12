@@ -1,0 +1,4 @@
+antiknockback:
+  Skills:
+    - delay 1
+    - velocity{m=set;x=0;y=0;z=0} @self

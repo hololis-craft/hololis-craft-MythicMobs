@@ -1,0 +1,25 @@
+combatleap:
+  Cooldown: 2
+  Conditions:
+    - stance{stance=suisei-second-phase} true
+    - stance{stance=suisei-second-phase-like} false
+    - stance{stance=suisei-death} false
+    - incombat
+  Skills:
+    - projectile{ot=[ - teleport @origin ];v=5;g=2;hr=2.5;vr=2.5;se=false;i=1;tyo=3;oe=combatleapEnd} @TL
+    - delay 200
+    - skill{s=combatleap} @self
+
+combatleapEnd:
+  Conditions:
+    - incombat
+  Skills:
+    - delay 5
+    - projectile{ot=[ - teleport @origin];v=9;g=2;hr=2.5;vr=2.5;se=false;i=1;tyo=3;oe=combatleapEnd2} @TL
+
+combatleapEnd2:
+  Conditions:
+    - incombat
+  Skills:
+    - delay 5
+    - projectile{ot=[ - teleport @origin];v=15;g=2;hr=2.5;vr=2.5;se=false;i=1;tyo=3} @TL

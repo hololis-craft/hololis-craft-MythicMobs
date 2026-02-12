@@ -1,0 +1,53 @@
+suiArmorHead1:
+  Id: diamond_helmet
+  Enchantments:
+    - UNBREAKING 10
+  Options:
+    Unbreakable: true
+suiArmorChest1:
+  Id: leather_chestplate
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+    Color: 60,141,202
+suiArmorLegs1:
+  Id: leather_leggings
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+    Color: 60,141,255
+suiArmorFeet1:
+  Id: leather_boots
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+    Color: 60,84,250
+suiWeapons1:
+  Id: golden_axe
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+suiWeapons2:
+  Id: netherite_sword
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+suiWeapons3:
+  Id: netherite_axe
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+suiseistar:
+  Id: nether_star
+  Enchantments:
+    - UNBREAKING 1
+suiseicrystal:
+  Id: end_crystal
+  Enchantments:
+    - UNBREAKING 1

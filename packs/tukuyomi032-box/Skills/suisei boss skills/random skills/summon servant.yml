@@ -1,0 +1,5 @@
+#summonservant:
+# Cooldown: 60
+#Conditions:
+#- onground true
+#Skills:

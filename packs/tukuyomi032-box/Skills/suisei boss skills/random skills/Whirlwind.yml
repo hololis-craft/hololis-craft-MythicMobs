@@ -1,0 +1,16 @@
+Whirlwind:
+  Cooldown: 6.5
+  Skills:
+    - leap{velocity=1300} @targetlocation
+    - effect:sound{s=entity.witch.throw;v=2.5;p=0.45} @self
+    - effect:sound{s=item.trident.riptide_3;v=5;p=0} @self
+    - effect:particlesphere{particle=reddust;color=#F7F136;amount=50;radius=3.5} @self
+    - effect:particlesphere{particle=Electric_Spark;amount=120;radius=2.5} @self
+    - particlelinehelix{Fo=true;db=0.4;hl=4.8;syo=0.75;p=Trial_Spawner_Detection;hr=1.5;md=45} @targetlocation
+    - skill{s=WhirlwindDamage;repeat=5;repeatInterval=1.7}
+WhirlwindDamage:
+  Skills:
+    - damage{a=4;ia=false;ignoreenchants=true;preventimmunity=true;pk=true} @EIR{r=5;ignore=animals,villagers,npc,armorstand}
+    - effect:particlesphere{particle=Electric_Spark;amount=50;radius=1.75} @self
+    - delay 60
+    - velocity{m=add;x=0;y=0.001;z=0} @self

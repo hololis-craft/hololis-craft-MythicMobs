@@ -1,0 +1,15 @@
+damagecombo:
+  Cooldown: 1
+  Conditions:
+    - targetwithin{d=2}
+  Skills:
+    - damage{a=1;ia=false;preventimmunity=true;pk=true} @target
+    - skill{s=damagecomboTick;repeat=6;repeatInterval=1}
+
+damagecomboTick:
+  Skills:
+    - damage{a=2;ia=true;ignoreenchants=true;preventimmunity=true;pk=true}
+    - throw{velocity=7;velocityY=0.5;repeat=5;repeatInterval=1} @target
+    - effect:sound{s=block.amethyst_block.break;v=1;p=0.5} @self
+    - effect:sound{s=block.amethyst_block.place;v=1;p=0.5} @self
+    - potion{t=SLOW;d=60;l=0} @target

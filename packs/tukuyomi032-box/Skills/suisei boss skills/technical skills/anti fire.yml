@@ -1,0 +1,4 @@
+antifire:
+  Skills:
+    - delay 1
+    - ignite{d=0} @self

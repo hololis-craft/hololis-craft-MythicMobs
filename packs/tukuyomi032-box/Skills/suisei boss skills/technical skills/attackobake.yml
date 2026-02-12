@@ -1,0 +1,30 @@
+attackobake:
+  Skills:
+    - projectile{ot=[ - teleport @origin ];v=10;g=1;hr=2.5;vr=2.5;se=false;i=1;tyo=3;oe=attackobakeEnd} @TL
+    - delay 200
+    - skill{s=attackobake} @self
+
+attackobakeEnd:
+  Conditions:
+    - incombat
+  Skills:
+    - delay 5
+    - projectile{ot=[ - teleport @origin];v=11;g=2;hr=2.5;vr=2.5;se=false;i=1;tyo=3;oe=attackobakeleapEnd2} @TL
+
+attackobakeleapEnd2:
+  Conditions:
+    - incombat
+  Skills:
+    - delay 5
+    - projectile{ot=[ - teleport @origin];v=10;g=0.5;hr=2.5;vr=2.5;se=false;i=1;tyo=3} @TL
+SmashAttackobake:
+  Cooldown: 8
+  Conditions:
+    - targetwithin{d=25}
+  Skills:
+    - teleport @targetlocation
+    - effect:sound{s=mob.endermen.portal;volume=1.0;pitch=0.5}
+    - delay 10
+    - damage{amount=5;ignorearmor=true} @target
+    - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+    - effect:explosion @Self

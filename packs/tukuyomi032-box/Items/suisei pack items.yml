@@ -1,0 +1,5 @@
+testweapon:
+  Id: stick
+  Display: 'teststick'
+  Skills:
+    - skill{s=testskillchoose} ~onUse

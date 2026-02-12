@@ -1,0 +1,54 @@
+deathsuisei:
+  Conditions:
+    - stance{stance=suisei-second-phase} true
+    - stance{stance=suisei-second-phase-like} false
+  Cooldown: 999999
+  Skills:
+    - runAIGoalSelector{goal=clear} @self
+    - effect:sound{s=entity.wither.shoot;v=0.3;p=0.5} @PIR{r=60}
+    - potion{t=SLOW;d=999999;l=10;force=true} @self
+    - potion{t=DAMAGE_RESISTANCE;d=999999;l=10;force=true} @self
+    - effect:spin{duration=120;velocity=15} @self
+    - potion{t=GLOWING;d=999999;l=0;force=true} @Self
+    - potion{t=INVISIBILITY;d=999999;l=10;force=true} @self
+    - potion{t=LEVITATION;d=999999;l=0;force=true} @self
+    - skill{s=deathsuiseitick;repeat=9;repeatInterval=10}
+    - delay 110
+    - effect:particlesphere{particle=falling_dust;material=light_blue_glazed_terracotta;amount=400;radius=4;y=1} @self
+    - effect:sound{s=block.beacon.deactivate;v=1;p=0.5} @PIR{r=60}
+    - effect:sound{s=block.end_portal.spawn;v=0.3;p=0.5} @PIR{r=60}
+    - effect:sound{s=entity.wither.death;v=0.1;p=0.5} @PIR{r=60}
+    - effect:sound{s=entity.elder_guardian.curse;v=1;p=0.5} @PIR{r=60}
+    - effect:sound{s=block.ender_chest.open;v=1;p=0.5} @PIR{r=60}
+    - effect:sound{s=entity.firework_rocket.large_blast_far;v=1;p=0.5} @PIR{r=60}
+    - potion{t=SLOW;d=1;l=0;force=true} @self
+    - potion{t=DAMAGE_RESISTANCE;d=1;l=0;force=true} @self
+    - delay 1
+    - suicide
+
+deathsuiseitick:
+  Skills:
+    - effect:itemspray{item=suiseistar;amount=4;velocity=2;duration=20;repeat=9;repeatInterval=1} @self
+    - effect:itemspray{item=suiseicrystal;amount=4;velocity=2;duration=20;repeat=9;repeatInterval=1} @self
+    - effect:sound{s=entity.wither.ambient;v=0.1;p=0.5;repeat=2;repeatInterval=3} @PIR{r=60}
+    - effect:sound{s=entity.vex.hurt;v=1;p=0.5;repeat=2;repeatInterval=3} @PIR{r=60}
+    - effect:sound{s=entity.elder_guardian.hurt;v=1;p=0.5;repeat=2;repeatInterval=3} @PIR{r=60}
+    - effect:particlesphere{particle=falling_dust;material=blue_stained_glass;amount=10;radius=1;y=1} @self
+    - delay 1
+    - effect:particlesphere{particle=falling_dust;material=light_blue_stained_glass;amount=10;radius=2;y=1} @self
+    - delay 1
+    - effect:particlesphere{particle=falling_dust;material=cyan_stained_glass;amount=20;radius=3;y=1} @self
+    - delay 1
+    - effect:particlesphere{particle=falling_dust;material=blue_ice;amount=20;radius=4;y=1} @self
+    - delay 1
+    - effect:particlesphere{particle=falling_dust;material=cyan_stained_glass;amount=30;radius=5;y=1} @self
+    - delay 1
+    - effect:particlesphere{particle=falling_dust;material=light_blue_stained_glass;amount=30;radius=6;y=1} @self
+    - delay 1
+    - effect:particlesphere{particle=falling_dust;material=blue_stained_glass;amount=50;radius=7;y=1} @self
+    - delay 1
+    - effect:particlesphere{particle=falling_dust;material=blue_ice;amount=40;radius=8;y=1} @self
+    - delay 1
+    - effect:particlesphere{particle=falling_dust;material=light_blue_glazed_terracotta;amount=50;radius=9;y=1} @self
+    - delay 1
+    - effect:particlesphere{particle=falling_dust;material=light_blue_glazed_terracotta;amount=50;radius=10;y=1} @self

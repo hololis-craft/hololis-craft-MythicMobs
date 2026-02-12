@@ -1,0 +1,16 @@
+suiseiselfdamage1:
+  Cooldown: 1
+  Conditions:
+    - stance{stance=suisei-second-phase-like} false
+    - stance{stance=suisei-second-phase} true
+    - stance{stance=suisei-death} false
+  Skills:
+    - potion{t=HEAL;d=3;l=2;force=true} @self
+
+suiseiselfdamage2:
+  Cooldown: 1
+  Conditions:
+    - stance{stance=suisei-second-phase} true
+    - stance{stance=suisei-death} false
+  Skills:
+    - potion{t=REGENERATION;d=3;l=3;force=true} @self
