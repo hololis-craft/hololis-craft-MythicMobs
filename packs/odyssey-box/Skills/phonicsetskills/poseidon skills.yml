@@ -1,0 +1,102 @@
+poseidonProrepeats:
+  Cooldown: 35
+  Conditions:
+    - crouching true
+    - wearing{armorslot=HAND;material=Poseidon} true
+  Skills:
+    - effect:sound{s=ambient.underwater.enter;v=2;p=0.55} @self
+    - effect:sound{s=block.ender_chest.open;v=1;p=1} @self
+    - delay 5
+    - effect:sound{s=entity.warden.sonic_charge;v=1;p=1} @self
+    - delay 35
+    - effect:sound{s=block.end_portal.spawn;v=1;p=2} @self
+    - effect:sound{s=block.anvil.place;v=1;p=1.45} @self
+    - skill{s=poseidonPro1;repeat=15;repeatInterval=25}
+    - delay 390
+    - effect:sound{s=block.vault.deactivate;v=2;p=0.75} @self
+    - effect:sound{s=entity.warden.death;v=1;p=1.3} @self
+poseidonPro1:
+  Skills:
+    - effect:sound{s=minecraft:block.enchantment_table.use;v=1;p=1} @self
+    - projectile{onTick=poseidonProTick1;v=10;i=1;hR=1;vR=1;StopAtBlock=false;StopAtEntity=false;vO=1.5;mr=60;syo=0.5;g=0.9;syo=7} @ring{r=15;p=30}
+    - projectile{onTick=poseidonProTick2;v=20;i=1;hR=1.5;vR=1.5;StopAtBlock=true;type=METEOR;HeightFromSurface=10;gravity=0.5} @Cone{angle=360;points=24;range=40;rotation=0}
+poseidonProTick1:
+  Skills:
+    - effect:particles{p=falling_dust;material=obsidian;amount=1;speed=0;hR=0.2;vR=0.2} @origin
+    - particle{p=dust_color_transition;color=#00d5ff;color2=#002bff;size=0.75} @origin
+    - throw{velocity=10;velocityY=10} @EIR{r=9;target=monster}
+    - delay 15
+    - damage{a=0.09;ia=false;preventimmunity=true;pk=true;preventknockback=true} @EIR{r=9;target=monster}
+poseidonProTick2:
+  Skills:
+    - particles{p=rain;a=3;hS=0;vS=0;speed=0} @origin
+poseidonwhenmainhand1:
+  Conditons:
+    - wearing{armorslot=HAND;material=Poseidon} true
+  Skills:
+    - orbital{onTick=poseidonwhenmainhand2;i=1;r=3;points=60;oy=1.3;d=61;HitNonPlayers=true} @self
+    - orbital{onTick=poseidonwhenmainhand2;i=1;r=-3;points=60;oy=1.3;d=61;HitNonPlayers=true} @self
+poseidonwhenmainhand2:
+  Skills:
+    - effect:particles{p=endrod;a=1;hs=0;vs=0;y=0} @origin
+poseidonProprepare:
+  Conditions:
+    - crouching true
+    - onground true
+  Cooldown: 5
+  Skills:
+    - skill{s=poseidonPro2}
+poseidonPro2:
+  Skills:
+    - effect:sound{s=ambient.underwater.enter;v=2;p=1} @self
+    - projectile{onTick=poseidonProTicks1;onHit=poseidonProHits1;onEnd=poseidonProHits1;v=25;i=1;vR=1;StopAtBlock=true;StopAtEntity=true;vO=3;mr=40;syo=2;g=1} @Cone{angle=360;points=3;range=40;rotation=0}
+poseidonProTicks1:
+  Skills:
+    - effect:particles{p=reddust;color=#0000aa;vS=0;hS=0;speed=0;a=7} @origin
+poseidonProHits1:
+  Skills:
+    - effect:blockmask{m=water;d=60;onlyAir=true;radius=2} @origin
+    - delay 10
+    - projectile{onTick=poseidonProTicks2;onEnd=poseidonProHits2;v=25;i=1;vR=1;StopAtBlock=true;StopAtEntity=true;vO=3;mr=40;syo=3.5;g=1} @Cone{angle=360;points=3;range=40;rotation=0}
+poseidonProTicks2:
+  Skills:
+    - effect:particles{p=reddust;color=#aa0000;vS=0;hS=0;speed=0;a=7} @origin
+poseidonProHits2:
+  Skills:
+    - effect:blockmask{m=lava;d=80;onlyAir=true;radius=2} @origin
+    - delay 10
+    - projectile{onTick=poseidonProTicks3;onEnd=poseidonProHits3;v=25;i=1;vR=1;StopAtBlock=true;StopAtEntity=true;vO=3;mr=40;syo=3.5;g=1} @Cone{angle=360;points=5;range=40;rotation=0}
+poseidonProTicks3:
+  Skills:
+    - effect:particles{p=reddust;color=#00aaaa;vS=0;hS=0;speed=0;a=5} @origin
+poseidonProHits3:
+  Skills:
+    - effect:blockmask{m=light_blue_concrete;d=120;onlyAir=true;radius=2} @origin
+    - delay 10
+    - projectile{onTick=poseidonProTicks4;onEnd=poseidonProHits4;v=35;i=1;vR=1;StopAtBlock=true;StopAtEntity=true;vO=3;mr=40;syo=3.5;g=1} @Cone{angle=360;points=5;range=40;rotation=0}
+poseidonProTicks4:
+  Skills:
+    - effect:particles{p=reddust;color=#aa00aa;vS=0;hS=0;speed=0;a=2} @origin
+poseidonProHits4:
+  Skills:
+    - effect:blockmask{m=black_concrete_powder;d=160;onlyAir=true;radius=2} @origin
+    - delay 10
+    - effect:sound{s=entity.generic.extinguish_fire;v=3} @self
+    - delay 6
+    - projectile{onTick=poseidonProTicks5;onHit=poseidonProHits5;onEnd=poseidonProHits5;v=25;i=1;vR=1;StopAtBlock=true;StopAtEntity=true;vO=3;mr=40;syo=3.5;g=0.5} @Cone{angle=360;points=3;range=40;rotation=0}
+    - skill{s=poseidonProSpecial1}
+poseidonProTicks5:
+  Skills:
+    - effect:particles{p=SweepAttack;a=1;vS=1.5;hS=2;speed=0} @origin
+poseidonProHits5:
+  Skills:
+    - effect:sound{s=entity.generic.explode;v=2} @self
+    - damage{a=30;ia=true;ignoreenchants=true;preventimmunity=true;pk=false,is=true;pad=false;ir=true} @EntitiesNearOrigin{r=5}
+    - effect:particles{p=damage_indicator;a=5;hS=1.75;vS=2;speed=1.5} @target
+poseidonProSpecial1:
+  Skills:
+    - effect:particlering{p=flame;a=1;hs=0;vs=0;y=0.05;r=1;points=24} @self
+    - effect:particlering{p=flame;a=1;hs=0;vs=0;y=0.1;r=2;points=32} @self
+    - effect:particlering{p=flame;a=1;hs=0;vs=0;y=0.2;r=3;points=48} @self
+    - effect:particlering{p=flame;a=1;hs=0;vs=0;y=0.3;r=4;points=64} @self
+    - effect:particleline{particle=falling_dust;material=redstone_block;amount=1;targetYOffset=0.05;distanceBetween=0.1;startYOffset=0.05} @Ring{radius=4;points=8}

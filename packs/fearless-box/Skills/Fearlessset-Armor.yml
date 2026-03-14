@@ -1,0 +1,4 @@
+indomitablespirit:
+  Skills:
+    - delay 1
+    - potion{t=POISON;d=0;l=0;force=true} @self

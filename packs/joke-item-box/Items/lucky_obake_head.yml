@@ -1,0 +1,16 @@
+lucky-obake-head:
+  Id: player_head
+  Display: '&d&l&nobaka_3の頭'
+  Lore:
+    - 'おばけさんの頭'
+    - 'ラッキーボックスから超低確率でドロップするようだ'
+  Enchantments:
+    - PROTECTION 5
+    - AQUA_AFFINITY 3
+    - RESPIRATION 3
+  Attributes:
+    Head:
+      Scale: -0.2
+      StepHeight: 0.3
+  Options:
+    Player: obake_3

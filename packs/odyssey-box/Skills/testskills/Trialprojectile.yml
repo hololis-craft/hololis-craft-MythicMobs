@@ -1,0 +1,14 @@
+Testprojectile:
+  Skills:
+    - projectile{oT=projectiletick;oH=projectileHit;Velocity=10;Interval=1;gravity=0.5;VerticalRadius=1;HorizontalRadius=1;StartYOffset=1.5;MaxRange=40;hp=false;hnp=true;StopAtEntity=false;StopAtBlock=true} @targetlocation
+
+projectiletick:
+  Skills:
+    - e:p{p=firework;a=5;vs=0;hs=0.3} @origin
+
+projectileHit:
+  Skills:
+    - am{msg='Projectile was hit!'} @self
+    - damage{a=10;ia=true;ignoreshield=true} @target
+    - e:p{p=angry_villager;a=2;hs=0.11;vs=0.1} @target
+    - e:s{s=entity.generic.explode} @self

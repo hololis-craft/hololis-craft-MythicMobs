@@ -1,0 +1,113 @@
+jokerskill1:
+  Cooldown: 3.5
+  Conditions:
+    - wearing{armorslot=HAND;material=JokerSword} true
+  Skills:
+    - potion{t=WEAKNESS;d=200;l=2} @target{ignore=villagers,npc,armorstand,player}
+    - potion{t=POISON;d=80;l=1} @target{ignore=villagers,npc,armorstand,player}
+    - potion{t=wither;d=40;l=50} @Target{ignore=villagers,npc,armorstand,player} 0.005
+    - particle{p=dragon_breath;a=50;s=0.5;hs=0.03;vs=0.05} @Target
+    - particle{p=damage_indicator;a=15;s=0.5;hs=;vs=0.6} @Target
+    - sound{s=block.enchantment_table.use;v=100;p=1.4} @Self
+    - delay 10
+    - skill{s=jokerskillparticle}
+jokerskillparticle:
+  Skills:
+    - effect:particles{particle=explosion_emitter;yOffset=2.5;amount=1;hS=1.3;vS=1.5;speed=0.1}
+    - effect:sound{s=entity.wither.break_block;v=0.5;p=0} @Self
+    - damage{a=3.5} @target{ignore=villagers,npc,armorstand,player}
+    - delay 70
+    - am{m=<#DC143C>&l&m*&r <#9932CC>&l&nWeakening Skills&r &c&l&nCharged!} @Self
+jokerskillarrow:
+  Cooldown: 15.0
+  Condition:
+    - crouching true
+  Skills:
+    - sound{s=block.enchantment_table.use;v=100;p=1.4} @Self
+    - particle{p=dragon_breath;a=50;s=0.5;hs=0.03;vs=0.05} @Self
+    - delay 10
+    - am{m=<#DC143C>&l&m*&r <#9932CC>&l&nLevitation Skills&r &c&l&nActivationed!} @Self
+    - ignite{t=140} @EIR{r=20;ignore=villagers,npc,armorstand,animal,player}
+    - fakelightning @EIR{r=20;ignore=villagers,npc,armorstand,animal,player}
+    - glow{c=RED} @EIR{r=20;ignore=villagers,npc,armorstand,animal,player}
+    - potion{t=levitation;d=120;l=1} @EIR{r=20;ignore=villagers,npc,armorstand,animal,player}
+    - potion{t=slowness;d=320;l=1} @EIR{r=20;ignore=villagers,npc,armorstand,animal,player}
+    - potion{t=weakness;d=210;l=1} @EIR{r=20;ignore=villagers,npc,armorstand,animal,player}
+    - delay 306
+    - am{m=<#DC143C>&l&m*&r <#9932CC>&l&nLevitation Skills&r &c&l&nCharged!} @Self
+jokerskillshovel:
+  Cooldown: 25.0
+  TriggerConditions:
+    - crouching true
+    - hasitem{i=DIRT;a=>63}
+  OnFailSkill: jokerskillshovelfail
+  Skills:
+    - am{m=<#DC143C>&l&m*&r <#9932CC>&l&nHaste Skill&r &c&l&nActivated!} @Self
+    - s{s=entity.phantom.death} @self
+    - e:p{p=angry_villager;a=20;hs=0.2;vs=0.3} @self
+    - e:p{p=electric_spark;a=15;hs=0.2;vs=0.3} @self
+    - e:p{p=frame;a=14;hs=0.2;vs=0.3} @self
+    - potion{t=HASTE;d=100;l=6} @self
+    - potion{t=SPEED;d=90;l=2} @self
+    - take{i=DIRT;a=64} @self
+    - delay 500
+    - am{m=<#DC143C>&l&m*&r <#9932CC>&l&nHaste Skill&r &c&l&nCharged!} @Self
+
+jokerskillstrong:
+  Cooldown: 20.0
+  Conditions:
+    - crouching true
+    - health{h=>9} true
+  OnFailSkill: jokerskillstrongfail
+  Skills:
+    - am{m=<#DC143C>&l&m*&r <#9932CC>&l&nEnhancement Skill&r &c&l&nActivationed!} @Self
+    - s{s=block.anvil.place;p=0.6;v=1} @self
+    - particle{p=dragon_breath;a=50;s=0.5;hs=0.03;vs=0.05} @Self
+    - delay 10
+    - s{s=block.end_portal.spawn;p=2;v=1} @self
+    - particle{p=damage_indicator;a=30;s=0.4;hs=0.4;vs=0.6} @self
+    - particle{p=dust_color_transition;color=#FF00FF;color2=#9400D3;size=0.5;hs=0.6;vs=0.6} @self
+    - damage{a=16;ia=true} @self
+    - potion{t=strength;d=100;l=6} @self
+    - potion{t=absorption;d=200;l=2} @self
+    - potion{t=resistance;d=100;l=2} @self
+    - potion{t=blindness;d=200;l=255} @self
+    - potion{t=hunger;d=230;l=4} @self
+    - potion{t=slowness;d=80;l=1} @self
+    - itemspray{item=ominous_bottle;amount=20;velocity=2;d=65} @self
+    - itemspray{item=totem_of_undying;amount=15;velocity=2;d=65} @self
+    - delay 400
+    - am{m=<#DC143C>&l&m*&r <#9932CC>&l&nEnhancement Skills&r &c&l&nCharged!} @Self
+
+jokerskillshovelfail:
+  Skills:
+    - am{m=<#DC143C>&l&m*&r &c&l&nThere is not enough dirt to activate the skill!} @Self
+    - s{s=block.note_block.xylophone;p=0;v=1;r=0} @self
+    - e:p{p=large_smoke;a=8;hs=0.2;vs=0.9} @self
+
+jokerskillstrongfail:
+  Skills:
+    - am{m=<#DC143C>&l&m*&r &c&l&nI COULD NOT activate it!} @Self
+    - s{s=block.note_block.xylophone;p=0;v=1;r=0} @self
+    - e:p{p=large_smoke;a=8;hs=0.2;vs=0.9} @self
+
+Jokersetfood1effect:
+  Cooldown: 0.2
+  Conditions:
+    - wearing{item=Jokersetfood1-kelp;slot=HAND}
+  Skills:
+    - heal{a=1.5;oh=false} @self
+    - feed{a=1.2;s=0.1} @self
+    - consumeHeldItem{amount=1} @trigger 0.99999999
+    - consumeHeldItem{a=2} @trigger 0.0000000001
+    - oxygen{a=3} @self 0.05
+    - ignite{t=20;repeat=4;repeatinterval=40} @self 0.001
+    - potion{t=regeneration;d=60;l=1} @self 0.01
+    - potion{t=poison;d=45;l=2} @self 0.00015
+    - potion{t=conduita_power;d=20;l=255} @self 0.000000020
+    - potion{t=oozing;d=40;l=1} @self 0.0015
+    - potion{t=nausea;d=200;l=1} @self 0.0000030
+    - potion{t=wither;d=200;l=20} @EIR{r=10;ignore=player,armorstand,animal,villager} 0.00000000000005
+    - damage{a=500;na=true;ia=true} @EIR{r=10;ignore=player,armorstand,animal,villager} 0.00000000000000001
+    - s{s=entity.generic.eat;p=1.6;audience=@self} @self
+    - e:p{p=cloud;c=#006400;a=10;hs=0.5;yoffset=1.7} @self

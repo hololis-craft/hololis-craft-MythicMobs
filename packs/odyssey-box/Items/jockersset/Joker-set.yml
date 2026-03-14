@@ -1,0 +1,106 @@
+Jokersethelmet:
+  Id: iron_helmet
+  Display: '&6&l&m= &9&l&m{&r&b&l&m(&r &e&l&ka&r &b&l&nJoker&r&9&l&nset&r &e|&r &6&l&nHelmet&r &e&l&ka&r &b&l&m)&r&9&l&m} &6&l&m=&r'
+  Attributes:
+    Head:
+      Health: 6
+      Armor: 3
+      ArmorToughness: 1.5
+      MovementSpeed: 0.04
+  Enchantments:
+    - PROTECTION 3
+    - BLAST_PROTECTION 2
+    - PROTECTION_FIRE 3
+    - PROJECTILE_PROTECTION 3
+    - RESPIRATION 4
+    - AQUA_AFFINITY 3
+    - THORNS 3
+    - UNBREAKING 3
+    - MENDING 1
+  Lore:
+    - '&f&l&m{&r&eOdyssey-Armor-Packs&r&f&l&m}&r'
+  Skills:
+    - effect:particles{p=dripping_obsidian_tear;amount=10;y=0.9;hs=0.3;vs=0.3} @self ~onTimer:35
+Jokersetchestplate:
+  Id: iron_chestplate
+  Display: '&6&l&m= &9&l&m{&r&b&l&m(&r &e&l&ka&r &b&l&nJoker&r&9&l&nset&r &e|&r &6&l&nChestplate&r &e&l&ka&r &b&l&m)&r&9&l&m} &6&l&m=&r'
+  Attributes:
+    Chest:
+      Health: 2
+      Armor: 5
+      ArmorToughness: 1.3
+      MovementSpeed: 0.04
+  Enchantments:
+    - PROTECTION 5
+    - PROTECTION_FIRE 2
+    - FEATHER_FALLING 3
+    - BLAST_PROTECTION 2
+    - THORNS 4
+    - UNBREAKING 3
+    - MENDING 1
+  Lore:
+    - '&f&l&m{&r&eOdyssey-Armor-Packs&r&f&l&m}&r'
+  Skills:
+    - effect:particles{p=dripping_obsidian_tear;amount=10;y=0.6;hs=0.3;vs=0.3} @self ~onTimer:35
+Jokersetleggings:
+  Id: iron_leggings
+  Display: '&6&l&m= &9&l&m{&r&b&l&m(&r &e&l&ka&r &b&l&nJoker&r&9&l&nset&r &e|&r &6&l&nLeggings&r &e&l&ka&r &b&l&m)&r&9&l&m} &6&l&m=&r'
+  Attributes:
+    Legs:
+      Health: 1.8
+      Armor: 3
+      ArmorToughness: 1.2
+      MovementSpeed: 0.05
+  Enchantments:
+    - PROTECTION 3
+    - BLAST_PROTECTION 1
+    - PROJECTILE_PROTECTION 2
+    - SWIFT_SNEAK 2
+    - FEATHER_FALLING 2
+    - THORNS 2
+    - UNBREAKING 3
+    - MENDING 1
+  Lore:
+    - '&f&l&m{&r&eOdyssey-Armor-Packs&r&f&l&m}&r'
+  Skills:
+    - effect:particles{p=dripping_obsidian_tear;amount=10;y=0.6;hs=0.3;vs=0.3} @self ~onTimer:35
+Jokersetboots:
+  Id: iron_boots
+  Display: '&6&l&m= &9&l&m{&r&b&l&m(&r &e&l&ka&r &b&l&nJoker&r&9&l&nset&r &e|&r &6&l&nBoots&r &e&l&ka&r &b&l&m)&r&9&l&m} &6&l&m=&r'
+  Attributes:
+    Boots:
+      Health: 2
+      Armor: 2
+      ArmorToughness: 1.3
+      MovementSpeed: 0.04
+  Enchantments:
+    - BLAST_PROTECTION 4
+    - PROTECTION_FIRE 2
+    - PROJECTILE_PROTECTION 3
+    - FEATHER_FALLING 3
+    - SOUL_SPEED 2
+    - DEPTH_STRIDER 3
+    - UNBREAKING 2
+    - MENDING 1
+  Lore:
+    - '&f&l&m{&r&eOdyssey-Armor-Packs&r&f&l&m}&r'
+  Skills:
+    - effect:particles{p=dripping_obsidian_tear;amount=10;y=0.6;hs=0.3;vs=0.3} @self ~onTimer:35
+Jokersetfood1-kelp:
+  Id: dried_kelp
+  Display: '<gradient:#FFA500:#00FFFF>&l&m* === * &r<#00FF7F>&m&kaaa&r <gradient:#9932CC:#483D8B>&lSuspicious&r &6&l&ka&r <gradient:#00FFFF:#0000FF>&lFood&r <#00FF7F>&l&m&kaaa &r<gradient:#00FFFF:#FFA500>&l&m * === *&r'
+  Lore:
+    - '&6&l&m*&r Suspicious Food by Jokerset'
+    - '&6&l&m*&r &7Does this food look suspicious?&r &e&nEAT&r'
+    - '&6&l&m*&r &bJokerset'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+    - '&3&l&m*&r &6&oSkill:&r &7Become Fresh and Innovative Food'
+    - '&3&l&m*&r &6&oSkill:&r &7Gives a suspicious effect'
+    - '&3&l&m*&r &7Right Click to Eat'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    HideFlags: true
+  Skills:
+    - skill{s=Jokersetfood1effect} ~onUse

@@ -1,0 +1,12 @@
+ProtestSword:
+  Id: NETHERITE_SWORD
+  Display: '&6TestSword'
+  Lore:
+    - '&7Test Sword'
+    - '&bRight Click to activation'
+  Enchantments:
+    - SHARPNESS 10
+  Options:
+    Unbreakable: true
+  Skills:
+    - skill{s=Testprojectile} ~onUse

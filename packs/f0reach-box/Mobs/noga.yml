@@ -1,0 +1,45 @@
+Nogachan:
+  Type: SKELETON
+  Display: '&6&lNogaNekko'
+  Health: 800
+  Damage: 8
+  Armor: 4
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    Silent: false
+    Despawn: false
+    AlwaysShowName: true
+  Equipment:
+    - NogaArmorHead1 HEAD
+    - NogaArmorChest1 CHEST
+    - NogaArmorLegs1 LEGS
+    - NogaArmorFeet1 FEET
+    - NogaWeapons1 HAND
+    - NogaWeapons2 OFFHAND
+  AIGoalSelectors:
+    - clear
+    - meleeattack
+    - randomstroll
+  AITargetSelectors:
+    - clear
+    - players
+  Drops:
+    - NogachanDrops
+  Skills:
+    # 通常攻撃パターン
+    #- skill{s=MeleeAttack} @target ~onTimer:40
+    #- skill{s=FireballAttack} @target ~onTimer:40
+
+    # 特殊攻撃のトリガー
+    #- skill{s=BrownPoop} ~onTimer:200 0.7
+    #- skill{s=NenechiStream} ~onTimer:300 0.5
+    - randomskill{s=NenechiMemberOnly,CarrotBomb,BrownPoop} ~onTimer:300
+  #- skill{s=antifire} ~onDamaged
+  BossBar:
+    Enabled: true
+    Title: '&e&m&l.,;&r&e&m&l={&r&f&m&l&ka&r&6&n&lNoga-Nekko&r&f&m&l&ka&r&e&m&l}=&r&e&m&l;,.&r'
+    Range: 240
+    Color: GREEN
+    Style: SEGMENTED_20
+    CreateFog: true

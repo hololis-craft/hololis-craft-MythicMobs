@@ -1,0 +1,36 @@
+Spectacle:
+  Id: diamond_sword
+  Display: '&2&l&k.,;&r&a&m&l=&n( &r&f&l&m&l&kaa&r&3&m&l=&n{ &r&f&l&n&m:;:&r&6&lS&r&c&lp&r&6&le&r&c&lc&r&a&lt&r&6&la&r&c&lc&r&6&ll&r&c&le&r&f&l&m&n:;:&r&3&l&m&n }&r&3&l&m=&r&f&l&m&kaa&r&a&m&l&n }&r&a&l&m=&r&2&l&k:;:'
+  Attributes:
+    mainhand:
+      Damage: 9
+      Health: 8
+      AttackSpeed: 0.12
+      MovementSpeed: 0.05
+      KnockbackResistance: 0.07
+      Luck: 3
+  Lore:
+    - '&3&l&m*&r &7&l&oUnexplained and strange abilities'
+    - '&3&l&m*&r &6F&r&ee&r&6a&r&er&r&6l&r&ee&r&6s&r&es&r&7Pack'
+    - '&f&l&m*---=---=---=---=---=---=---=---=---=---=---*'
+    - '&6&l&m=*&r &c&nSkill&r: &3DivineJump&r'
+    - '&6&l&m=*&r &c&nSkill&r: &3Whirlwind&r'
+    - '&6&l&m*&r &7Right Click + Crouching&r &f&l))&r &2&oSoar high in the sky!&r'
+    - '&6&l&m*&r &7Right Click&r &f&l))&r &2Rush in the direction you are facing.&r'
+    - '&f&l&m*---=---=---=---=---=---=---=---=---=---=---*'
+  Enchantments:
+    - SHARPNESS 6
+    - SMITE 6
+    - BANE_OF_ARTHROPODS 7
+    - SWEEPING_EDGE 3
+    - FIRE_ASPECT 2
+    - LOOTING 4
+    - BREACH 5
+    - UNBREAKING 8
+    - MENDING 1
+    - VANISHING_CURSE 1
+  Skills:
+    - skill{s=SmitePower} ~onUse
+    - skill{s=Whirlwind} ~onUse
+    - potion{t=regeneration;d=65;l=1;force=true} @Self ~onTimer:75
+    - effect:particles{p=dust_color_transition;color=#FF0000;color2=#0000FF;size=1.15;amount=16;speed=0.01;y=0.8;hs=0.5;vs=0.8} @self ~onTimer:15

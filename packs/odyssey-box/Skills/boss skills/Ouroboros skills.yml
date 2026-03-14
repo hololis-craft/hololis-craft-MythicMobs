@@ -1,0 +1,10 @@
+Skills:
+  CurvedParticle:
+    - delay 10
+    - particle{particle=flame;amount=1;speed=0.1;x=0;y=0;z=0} @origin
+    - delay 1
+    - velocity{vector=0.1,0.1,0} @LastAttacker
+    - delay 1
+    - velocity{vector=0.2,0.1,0} @LastAttacker
+    - delay 1
+    - velocity{vector=0.3,0.1,0} @LastAttacker

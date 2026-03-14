@@ -1,3 +1,4 @@
+#ボスの死亡モーション
 deathsuisei:
   Conditions:
     - stance{stance=suisei-second-phase} true

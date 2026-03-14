@@ -1,3 +1,5 @@
+#ボスのHPが200と等しい場合(ハート１００個分)に発動
+#第２形態移行モーション
 suiseisecondphaselike:
   Cooldown: 999999
   Skills:

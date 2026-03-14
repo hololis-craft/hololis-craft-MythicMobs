@@ -1,0 +1,35 @@
+FrostRestraint:
+  Id: diamond_axe
+  Display: '&b&l✴&r&2&l❅&r&b&l✴&r&1&m&n&l&ka&r&7&l&m&n.,;:&1&m&n&l&ka&r&9&m&l(&r&3&m&l(&r&b&m&l(&r<bold><gradient:#FD6152:#46C4FF> FrostRestraint &r&b&m&l)&r&3&m&l)&r&9&m&l)&r&1&m&n&l&ka&r&7&m&l&n:;,.&r&1&m&n&l&ka&r&b&l✴&r&2&l❅&r&b&l✴&r'
+  Options:
+    Unbreakable: true
+  Enchantments:
+    - FIRE_ASPECT 4
+    - SHARPNESS 5
+    - SMITE 5
+    - BANE_OF_ARTHROPODS 8
+    - LOOTING 3
+    - IMPALING 6
+    - VANISHING_CURSE 1
+    - WIND_BURST 1
+    - BREACH 1
+  Attributes:
+    MainHand:
+      AttackSpeed: 0.0045
+      Damage: 3
+      Health: 4
+      Luck: 1.85
+      MovementSpeed: 0.063
+  Lore:
+    - '&3&l&m*&r &7&l&o TEST'
+    - '&3&l&m*&r &6F&r&ee&r&6a&r&er&r&6l&r&ee&r&6s&r&es&r&7Pack'
+    - '&f&l&m*---=---=---=---=---=---=---*'
+    - '&6&l&m=*&r &C&nSkill&r: TEST'
+    - '&6&l&m=*&r &CSkill&r: TEST'
+    - '&6&l&m*&r &C TEST'
+    - '&6&l&m*&r &C TEST'
+    - '&f&l&m*---=---=---=---=---=---=---*'
+  Skills:
+    - effect:particles{p=reddust;amount=25;speed=0.01;y=0.8;hs=0.5;vs=0.8;color=#4BBEEC} @self ~onTimer:15
+    - effect:particles{p=reddust;amount=28;speed=0.01;y=0.8;hs=0.5;vs=0.8;color=#CF4F63} @self ~onTimer:15
+    - effect:particlering{particle=enchantmenttable;radius=0.3;points=12;amount=5;hS=0;vS=0;y=1.2} @self ~onTimer:45

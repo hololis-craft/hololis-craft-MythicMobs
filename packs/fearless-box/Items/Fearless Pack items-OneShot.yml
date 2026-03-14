@@ -1,0 +1,28 @@
+OneShot:
+  Id: bow
+  Display: '&7&l&m.,:;*&n&ka&r&3&l&n|]I[&r&4&l&m&n&k:aa:&r<bold><gradient:#DB2D58:#D1CB12>✩✭✮✯✰✡OneShot<gradient:#3B3B3B:#FF0000>✡✰✯✮✭✩&r&4&l&n&m&k:aa:&r&3&l&n]I[|&r&7&l&m&n&ka&r&7&l&m*;:,.'
+  Enchantments:
+    - ARROW_DAMAGE 6
+    - FLAME 5
+    - PUNCH 4
+    - INFINITY 1
+    - VANISHING_CURSE 1
+    - UNBREAKING 7
+    - MENDING 1
+  Attributes:
+    mainhand:
+      Health: 4
+      MovementSpeed: 0.015
+  Skills:
+    - skill{s=SuperArrow} ~onBowHit
+    - skill{s=Arrowswarm} ~onBowHit 0.05
+    - particleorbital{r=0.83;points=7;t=9;i=1;vy=20;particle=Trial_Spawner_Detection} @self ~onTimer:30
+  Lore:
+    - '&3&l&m*&r &7&l&oStrong beyond strong '
+    - '&3&l&m*&r &6F&r&ee&r&6a&r&er&r&6l&r&ee&r&6s&r&es&r&7Pack'
+    - '&f&l&m*---=---=---=---=---=---=---=---=---=---*'
+    - '&6&l&m=*&r &c&nSkill&r: &cBlastArrows&r'
+    - '&6&l&m=*&r &c&nSkill&r: &cArrowCage&r'
+    - '&6&l&m*&r &7Attack&r &f&l))&r &7Sink the enemy with a single blow&r'
+    - '&6&l&m*&r &7Passive&r&f >> &r&7Low probability of ejecting a swarm of arrows.&r'
+    - '&f&l&m*---=---=---=---=---=---=---=---=---=---*'

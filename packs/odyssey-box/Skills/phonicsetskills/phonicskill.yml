@@ -1,0 +1,237 @@
+phonicEffectOnAttack:
+  Conditions:
+    - wearing{armorslot=HAND;material=Elemental} true
+  Skills:
+    - itemspray{item=Elementalskillsitems;amount=13;velocity=0.85;d=25;r=1.25;yf=1.17;gravity=false} @target
+    - effect:sound{s=block.chain.place;v=2.5;p=0.6} @self
+    - effect:sound{s=block.piston.extend;v=1;p=0.45} @self
+phonicskill1:
+  Skills:
+    - effect:sound{s=ambient.underwater.enter;v=1;p=0.5} @self
+    - effect:sound{s=entity.breeze.wind_burst;v=1;p=0.5} @self
+    - effect:sound{s=entity.arrow.hit;v=1;p=0.5} @self
+    - effect:sound{s=entity.generic.burn;v=2;p=0.75} @self
+    - projectile{onTick=phonicskill2;onHit=phonicskill3;v=20;i=1;hR=2.5;vR=2.5;type=METEOR;HeightFromSurface=8;gravity=0.1;md=90;fo=true;HitPlayers=false;HitNonPlayers=true;StopAtEntity=false} @origin
+    - skill{s=phonicskill3;repeat=3;repeatInterval=1.7}
+phonicskill2:
+  Skills:
+    - effect:particlering{p=soul;amount=1;speed=0;hS=0;vS=0;points=20;r=3} @origin
+    - effect:particlering{p=soul;amount=1;speed=0;hS=0;vS=0;points=40;r=8} @origin
+    - delay 20
+    - particles{p=falling_dust;material=redstone_block;amount=10;speed=0.5;hS=7.5;vS=2.15} @origin
+    - particles{p=flame;amount=15;speed=0;hS=5.5;vS=2.5} @origin
+    - delay 80
+    - effect:sound{s=explosion;v=1;p=1} @self
+phonicskill3:
+  Skills:
+    - effect:particleorbital{p=totem_of_undying;amount=1;speed=0.5;hS=0;vS=0;points=20;r=10} @origin
+    - potion{type=SLOW;duration=200;level=1} @EntitiesNearOrigin{r=15;ignore=villagers,npc,armorstand,player,animals}
+    - potion{type=poison;duration=500;level=9} @EntitiesNearOrigin{r=7;ignore=villagers,npc,armorstand,playeranimals}
+    - potion{type=nausea;duration=300;level=9} @EntitiesNearOrigin{r=10.5;ignore=villagers,npc,armorstand,playeranimals}
+    - potion{type=weakness;duration=300;level=0} @EntitiesNearOrigin{r=8.5;ignore=villagers,npc,armorstand,playeranimals}
+    - potion{type=levitation;duration=60;level=2} @EntitiesNearOrigin{r=7.5;ignore=villagers,npc,armorstand,player,animals}
+    - delay 80
+    - damage{a=28;ia=true;ignoreenchants=true;preventimmunity=true;pk=true} @EntitiesNearOrigin{r=15;ignore=villagers,npc,armorstand,player,animals}
+    - effect:lightning{localized=false} @EntitiesNearOrigin{r=15;ignore=villagers,npc,armorstand,player,animals}
+    - effect:sound{s=entity.breeze.wind_burst;v=1;p=2}
+    - effect:particles{particle=Gust_Emitter_Small;amount=28;hS=6.5;vS=5.5;speed=0.1} @target
+phonicskill:
+  Cooldown: 10
+  Conditions:
+    - crouching true
+    - wearing{armorslot=HAND;material=Elemental} true
+  Skills:
+    - effect:sound{s=item.crossbow.shoot;v=1;p=0.5} @self
+    - effect:sound{s=entity.experience_bottle.throw;v=1;p=1.3} @self
+    - effect:sound{s=block.amethyst_cluster.break;v=5;p=1.65} @self
+    - shoot{type=ARROW;velocity=1;damage=12;onHit=phonicskill1;onEnd=phonicskill1;vspread=0.5;hspread=0.5;pickup=false} @targetlocation
+    - delay 300
+    - sendactionmessage{m="&8&l[&c&lDrip Poisonスキルクールダウン 完了&8&l]"} @Self
+phonicsetfoodskills1:
+  Cooldown: 0.1
+  Conditions:
+    - wearing{item=phonicsetfood1_bread;slot=HAND}
+    - crouching true
+  Skills:
+    - consumeHeldItem{amount=1} @trigger
+    - feed{amount=5;saturation=6} @self
+    - heal{amount=1;overheal=false} @self
+    - potion{t=REGENERATION;d=40;l=0} @Self
+    - effect:particles{particle=electric_spark;amount=3;vSpread=0;hSpread=2;Speed=0;yoffset=1.7} @self
+    - effect:particles{p=reddust;amount=24;speed=0;hs=0.4;vs=0.8;y=0.7;color=#FFAA00} @self
+    - effect:sound{s=entity.generic.eat;v=0.7;p=0.7} @Self
+phonicsetfoodskills2:
+  Cooldown: 0.1
+  Conditions:
+    - wearing{item=phonicsetfood2_bakedpotato;slot=HAND}
+    - crouching true
+  Skills:
+    - consumeHeldItem{amount=1} @trigger
+    - feed{amount=5;saturation=6} @self
+    - heal{amount=1;overheal=false} @self
+    - potion{t=REGENERATION;d=40;l=0} @Self
+    - effect:particles{particle=electric_spark;amount=3;vSpread=0;hSpread=2;Speed=0;yoffset=1.7} @self
+    - effect:particles{p=reddust;amount=24;speed=0;hs=0.4;vs=0.8;y=0.7;color=#FFAA00} @self
+    - effect:sound{s=entity.generic.eat;v=0.7;p=0.7} @Self
+phonicsetfoodskills3:
+  Cooldown: 0.1
+  Conditions:
+    - wearing{item=phonicsetfood3_cooked_salmon;slot=HAND}
+    - crouching true
+  Skills:
+    - consumeHeldItem{amount=1} @trigger
+    - feed{amount=6;saturation=11} @self
+    - heal{amount=3;overheal=false} @self
+    - potion{t=REGENERATION;d=70;l=0} @Self
+    - effect:particles{particle=electric_spark;amount=3;vSpread=0;hSpread=2;Speed=0;yoffset=1.7} @self
+    - effect:particles{p=reddust;amount=24;speed=0;hs=0.4;vs=0.8;y=0.7;color=#FFAA00} @self
+    - effect:sound{s=entity.generic.eat;v=0.7;p=0.7} @Self
+phonicsetfoodskills4:
+  Cooldown: 0.1
+  Conditions:
+    - wearing{item=phonicsetfood4_cooked_beef;slot=HAND}
+    - crouching true
+  Skills:
+    - consumeHeldItem{amount=1} @trigger
+    - feed{amount=8;saturation=16} @self
+    - heal{amount=5;overheal=false} @self
+    - potion{t=REGENERATION;d=60;l=1} @Self
+    - effect:particles{particle=electric_spark;amount=3;vSpread=0;hSpread=2;Speed=0;yoffset=1.7} @self
+    - effect:particles{p=reddust;amount=24;speed=0;hs=0.4;vs=0.8;y=0.7;color=#FFAA00} @self
+    - effect:sound{s=entity.generic.eat;v=0.7;p=0.7} @Self
+phonicsetfoodskills5:
+  Cooldown: 0.1
+  Conditions:
+    - wearing{item=phonicsetfood5_golden_carrot;slot=HAND}
+    - crouching true
+  Skills:
+    - consumeHeldItem{amount=1} @trigger
+    - feed{amount=10;saturation=20} @self
+    - heal{amount=7;overheal=false} @self
+    - potion{t=REGENERATION;d=70;l=2} @Self
+    - effect:particles{particle=electric_spark;amount=3;vSpread=0;hSpread=2;Speed=0;yoffset=1.7} @self
+    - effect:particles{p=reddust;amount=24;speed=0;hs=0.4;vs=0.8;y=0.7;color=#FFAA00} @self
+    - effect:sound{s=entity.generic.eat;v=0.7;p=1.5} @Self
+phonicmjollnirskill1: #Mjollnirスキル1(phonicmjollnirskill1~5迄)
+  Cooldown: 20
+  Skills:
+    - delay 25
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>G";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>o";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>d";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>M";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>j";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>o";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>l";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>l";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>n";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>i";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>r";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>Mjollnir";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=1.6} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>God Mjollnir";subtitle="<gradient:#E19545:#FDDD4E>Skills";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#FDDD4E:#E19545>God Mjollnir";subtitle="<gradient:#E19545:#FDDD4E>Activated";d=20} @self
+    - effect:sound{s=block.amethyst_block.break;v=2;p=0.5} @Self
+    - delay 3
+    - sendtitle{title="<gradient:#ED4E88:#BD0000><bold>God Mjollnir";subtitle="<gradient:#BD0000:#ED4E88>Skills Activated";d=40} @self
+    - effect:sound{s=entity.illusioner.prepare_mirror;v=5;p=1.6} @Self
+    - delay 25
+    - effect:sound{s=entity.warden.sonic_charge;v=3;p=0.85}
+    - throw{velocity=30;velocityY=15} @EIR{r=8;target=monster}
+    - potion{t=SLOW;d=3600;l=4;force=true} @self
+    - effect:sound{s=entity.zombie.attack_iron_door;v=1;p=0.5} @self
+    - effect:sound{s=entity.iron_golem.death;v=1.0;p=1.3} @self{r=75}
+    - effect:particles{p=instantSpell;amount=20;speed=0.7;hS=1;vS=0.7} @self
+    - delay 40
+    - skill{s=phonicmjollnirskill2;repeat=6;repeatInterval=20}
+    - delay 180
+    - effect:particles{p=instantSpell;amount=20;speed=0.7;hS=1;vS=0.7} @self
+    - effect:sound{s=entity.zombie.infect;v=1;p=1.3} @self
+    - effect:sound{s=block.stone.break;v=0.7;p=0.7} @self
+    - potion{t=SLOW;d=1;l=0;force=true} @self
+phonicmjollnirskill2:
+  Skills:
+    - effect:sound{s=entity.ender_dragon.hurt;v=1;p=0.1} @self
+    - effect:sound{s=entity.warden.sonic_boom;v=1;p=1.2} @self
+    - projectile{onTick=phonicmjollnirskill3;onHit=phonicmjollnirskill4;v=32;i=1;hR=2;vR=1;StopAtBlock=false;mr=160;vO=0.5;g=0.5;StopAtEntity=false;hO=16} @Cone{angle=360;points=27;range=30;rotation=10}
+    - projectile{onTick=phonicmjollnirskill3;onHit=phonicmjollnirskill4;onEnd=phonicmjollnirskill5;v=16;i=1;hR=2;vR=1;StopAtBlock=false;mr=130;hs=true;StopAtEntity=false;hO=-16} @Cone{angle=360;points=16;range=30;rotation=10}
+phonicmjollnirskill3:
+  Skills:
+    - effect:particles{p=Note;a=3;hS=0;vS=0;speed=0} @origin
+    - effect:particles{p=SweepAttack;a=5;hS=0;vS=0;speed=0} @origin
+    - particlesphere{particle=Electric_Spark;amount=2;radius=3} @origin
+    - effect:particles{p=soul;a=1;hS=1;vS=0;speed=0} @origin
+    - particles{p=falling_dust;material=redstone_block;amount=1;speed=0.5;hS=7.5;vS=2.15} @origin
+    - damage{a=1;ia=true;ignoreenchants=true;preventimmunity=true;pk=true} @EntitiesNearOrigin{r=5;target=monster}
+phonicmjollnirskill4:
+  Skills:
+    - effect:sound{s=entity.firework_rocket.large_blast_far;v=0.7;p=0.7} @self
+    - effect:sound{s=entity.totem.use;v=1;p=2} @self
+    - throw{velocity=12;velocityY=5} @EntitiesNearOrigin{r=8;target=monster}
+phonicmjollnirskill5:
+  Skills:
+    - sendactionmessage{m="&8&l[&c&lGod of Thunder スキルクールダウン 完了 &8&l]"} @Self
+SwirlPrisonDebuff:
+  Cooldown: 15
+  Conditions:
+    - crouching true
+    - wearing{armorslot=HAND;material=phonicsetmjollnir1} true
+  Skills:
+    - skill{s=SwirlPrisononTick;repeat=7;repeatInterval=45}
+    - projectile{v=3.5;interval=10;i=200;hR=2;vR=2;g=0;ot=SwirlParticle;onEnd=SwirlEndEffect;stopat=false;inertia=0.98;sfo=true;syo=1;tyo=1} @target
+    - sound{s=entity.splash_potion.break;volume=3;pitch=0.75} @self
+    - effect:particlering{particle=Soul_Fire_Flame;radius=1;points=8;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 1
+    - effect:particlering{particle=Soul_Fire_Flame;radius=2.5;points=24;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 1
+    - effect:particlering{particle=Soul_Fire_Flame;radius=4;points=36;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 1
+SwirlParticle:
+  Skills:
+    - effect:particles{particle=redstone;color=#FF0000;a=15;hs=3;vs=1.5;y=1.15;ticks=360;r=1.5} @EIR{r=15;target=monster}
+    - effect:particles{particle=redstone;color=#00FF00;a=15;hs=3;vs=1.5;y=1.15;ticks=360;r=1.5} @EIR{r=15;target=monster}
+    - effect:particles{particle=redstone;color=#0000FF;a=15;hs=3;vs=1.5;y=1.15;ticks=360;r=1.5} @EIR{r=15;target=monster}
+SwirlEndEffect:
+  Skills:
+    - fakeexplosion @EIR{r=15.5;target=monster}
+    - delay 3
+    - sound{s=entity.elder_guardian.curse;volume=1.0;pitch=1.0} @self
+    - throw{velocity=12;velocityY=15} @EIR{r=20.5;target=monster}
+    - delay 15
+    - prison{duration=300;m=LIGHT_BLUE_STAINED_GLASS} @EIR{r=25;target=monster}
+    - damage{a=5;ia=true;ignoreenchants=true;preventimmunity=true;pk=false,is=true;pad=false;ir=true} @EIR{r=15.5;target=monster}
+    - potion{type=glowing;duration=600;level=9} @EntitiesNearOrigin{r=30;target=MONSTER}
+    - potion{type=SLOW;duration=1000;level=4} @EntitiesNearOrigin{r=30;target=MONSTER}
+    - potion{type=WEAKNESS;duration=1000;level=1} @EntitiesNearOrigin{r=30;target=MONSTER}
+SwirlPrisononTick:
+  Skills:
+    - sound{s=entity.illusioner.cast_spell;volume=3;pitch=1.5} @self
+    - particlesphere{particle=Composter;amount=15;radius=2} @EIR{r=20.5;target=monster}
+    - damage{a=10;ia=true;ignoreenchants=false;preventimmunity=true;pk=false,is=true;pad=false;ir=true} @EIR{r=15.5;target=monster}
+    - itemspray{item=redstone;amount=6;velocity=0.45;d=45;r=0.55;yf=0.5;gravity=false} @EIR{r=15.5;target=monster}
+    - effect:particles{p=Composter;amount=20;speed=0;hR=0.2;vR=0.2;hs=0.05;vs=0.1} @EIR{r=15;target=monster}

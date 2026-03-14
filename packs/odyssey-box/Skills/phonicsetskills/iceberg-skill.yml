@@ -1,0 +1,173 @@
+FreezeAttack:
+  Cooldown: 7
+  Conditons:
+    - wearing{item=Iceberg;slot=HAND} true
+  Skills:
+    - effect:sound{s=block.ender_chest.close;v=1;p=2} @self
+    - effect:sound{s=entity.dragon_fireball.explode;v=0.5;p=0.05} @self
+    - throw{velocity=10;velocityY=6} @target
+    - delay 3
+    - skill{s=FreezeAttack2;repeat=20;repeatInterval=3}
+    - delay 60
+    - effect:lightning{localized=false;localizedradius=32} @Trigger
+    - damage{a=0.05;ia=false;preventimmunity=true;pk=true} @EntitiesNearOrigin{r=2;target=monster}
+    - itemspray{item=packed_ice;amount=1;velocity=1.5;d=15;r=9;yf=5;gravity=false} @target
+    - projectile{onTick=FreezeProTick;onHit=FreezeProHit;onEnd=FreezeProHit;v=10;i=1;hR=1;vR=1;StopAtBlock=true;StopAtEntity=false;vO=1.5;mr=60;syo=0.5;g=0.9;syo=7} @ring{r=5;p=15} 0.7
+FreezeProTick:
+  Skills:
+    - particle{p=dust_color_transition;color=#00d5ff;color2=#002bff;size=2} @origin
+    - particle{p=Trial_Spawner_Detection;a=1} @origin
+FreezeProHit:
+  Skills:
+    - effect:blockmask{m=blue_ice;d=120;onlyAir=true;radius=1} @origin
+    - particle{p=explosion;a=3;vS=0.5;hS=1;speed=0.07;y=0.75} @origin
+    - particle{p=Gust_Emitter_Large;a=1;vS=0.5;hS=2;speed=0.07;y=0.95} @origin
+    - effect:sound{s=entity.generic.explode;v=0.3;p=1.75} @self
+    - delay 3
+    - skill{s=FreezeParticleAttack}
+    - delay 5
+    - projectile{bulletType=ITEM;material=suiseihead;onTick=shsProTick;onEnd=shsProEnd;onHit=shsProEnd;v=10;i=1;hR=2;vR=1;StopAtBlock=true;HitNonPlayers=false;vO=0.5;hO=16;g=0.4;bulletViewDistance=150;MaxDuration=200;mr=200;bulletCulling=false;bulletCullingHeight=100;bulletCullingWidth=100} @Cone{angle=360;points=3;range=70;rotation=10}
+FreezeParticleAttack:
+  Cooldown: 3
+  Skills:
+    - effect:sound{s=block.note_block.harp;v=1;p=0.5} @self
+    - effect:sound{s=entity.vex.hurt;v=1;p=0.5;repeat=14;repeatInterval=1} @self
+    - effect:particlering{particle=SweepAttack;radius=1;points=8;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=1}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=0.6} @self
+    - effect:particlering{particle=SweepAttack;radius=2;points=16;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=2}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=0.7} @self
+    - effect:particlering{particle=SweepAttack;radius=3;points=24;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=3}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=0.8} @self
+    - effect:particlering{particle=SweepAttack;radius=4;points=32;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=4}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=0.9} @self
+    - effect:particlering{particle=SweepAttack;radius=5;points=40;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=5}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1} @self
+    - effect:particlering{particle=SweepAttack;radius=6;points=48;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=6}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1.1} @self
+    - effect:particlering{particle=SweepAttack;radius=7;points=56;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=7}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1.2} @self
+    - effect:particlering{particle=SweepAttack;radius=8;points=64;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=8}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1.3} @self
+    - effect:particlering{particle=SweepAttack;radius=9;points=72;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=9}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1.4} @self
+    - effect:particlering{particle=SweepAttack;radius=10;points=80;amount=2;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=10}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1.5} @self
+    - effect:particlering{particle=SweepAttack;radius=11;points=88;amount=1;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=11}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1.6} @self
+    - effect:particlering{particle=SweepAttack;radius=12;points=96;amount=1;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=12}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1.7} @self
+    - effect:particlering{particle=SweepAttack;radius=13;points=104;amount=1;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=13}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1.8} @self
+    - effect:particlering{particle=SweepAttack;radius=14;points=112;amount=1;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=14}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=1.9} @self
+    - effect:particlering{particle=SweepAttack;radius=15;points=120;amount=1;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=cFreezeParticleDamage} @EIR{r=15}
+    - delay 1
+    - effect:sound{s=block.note_block.harp;v=1;p=2} @self
+    - effect:particlering{particle=SweepAttack;radius=16;points=128;amount=1;hS=0;vS=0;y=0.1} @self
+    - SudoSkill{s=FreezeParticleDamage} @EIR{r=16}
+FreezeParticleDamage:
+  Cooldown: 3
+  Skills:
+    - damage{a=4;ia=false;preventimmunity=true;pk=true} @self{target=monster}
+FreezeAttack2:
+  Skills:
+    - freeze{ticks=200} @EIR{r=4.5;target=monster}
+    - damage{a=1;ia=false;preventimmunity=true;pk=true;preventknockback=true} @EIR{r=5.5;target=monster}
+    - itemspray{item=ice;amount=5;velocity=0.85;d=25;r=1.25;yf=1.17;gravity=false} @EIR{r=7.5;target=monster}
+    - potion{type=SLOW;duration=200;level=9} @ENO{r=5;target=monster}
+    - effect:sound{s=entity.player.hurt_freeze;v=5;p=1} @self
+    - effect:sound{s=block.amethyst_block.place;v=3;p=1.5} @self
+    - effect:sound{s=block.dripstone_block.place;v=4;p=0.75} @self
+    - effect:sound{s=block.bubble_column.upwards_ambient;v=0.5;p=0.7} @self
+
+iceycombo:
+  Cooldown: 15
+  Conditons:
+    - wearing{item=Iceberg;slot=HAND} true
+  Skills:
+    - potion{t=DAMAGE_RESISTANCE;d=40;l=10;force=true} @Self
+    - potion{t=SLOW;d=40;l=0;force=true} @self
+    - throw{velocity=6;velocityY=6;repeat=2;repeatInterval=1} @EIR{r=6;target=monster}
+    - effect:sound{s=entity.illusioner.prepare_mirror;v=1;p=0.5} @self
+    - effect:sound{s=block.fire.extinguish;v=1;p=0.5} @self
+    - effect:sound{s=block.respawn_anchor.charge;v=1;p=2} @self
+    - effect:particles{p=witch;a=32;y=0.7;speed=0;hs=0.4;vs=0.7} @self
+    - effect:particlering{particle=Trial_Omen;speed=0;radius=1;points=8;amount=1;hS=0;vS=0;y=0.1} @self
+    - effect:particlering{particle=Trial_Omen;speed=0;radius=2;points=16;amount=1;hS=0;vS=0;y=1} @self
+    - effect:particlering{particle=Trial_Omen;speed=0;radius=3;points=24;amount=1;hS=0;vS=0;y=1.5} @self
+    - effect:particlering{particle=Trial_Omen;speed=0;radius=4;points=32;amount=1;hS=0;vS=0;y=2} @self
+    - effect:particlering{particle=Trial_Omen;speed=0;radius=5;points=40;amount=1;hS=0;vS=0;y=2.5} @self
+    - effect:particlering{particle=Trial_Omen;speed=0;radius=6;points=48;amount=1;hS=0;vS=0;y=3} @self
+    - delay 40
+    - effect:sound{s=entity.blaze.shoot;v=1;p=2} @self
+    - effect:sound{s=entity.shulker.shoot;v=1;p=0.5} @self
+    - projectile{onTick=iceyComboProjTick;onEnd=iceyComboProjEnd;v=14;i=1;hR=1;vR=1;StopAtBlock=true;sfo=0;vO=1.3;g=0.9;fo=false} @target
+
+iceyshoot:
+  Skills:
+    - projectile{onTick=iceyComboProjTick;onEnd=iceyComboProjEnd;v=14;i=1;hR=1;vR=1;StopAtBlock=true;sfo=0;vO=1.3;g=0.9;fo=true} @target
+
+iceyComboProjEnd:
+  Skills:
+    - projectile{onTick=iceyComboProjTick;onEnd=iceyshoot;v=14;i=1;hR=1;vR=1;StopAtBlock=true;sfo=0;vO=1.3;g=1.3;vO=0;fo=true} @target
+    - effect:sound{s=item.trident.thunder;v=1;p=0.5} @self
+    - effect:sound{s=block.campfire.crackle;v=3;p=0.5} @self
+    - effect:sound{s=block.respawn_anchor.set_spawn;v=1;p=2} @self
+    - effect:sound{s=entity.blaze.shoot;v=1;p=2} @self
+    - effect:sound{s=entity.shulker.shoot;v=1;p=0.5} @self
+    - damage{a=3;ia=true;ignoreenchants=true;preventimmunity=true;pk=true} @EntitiesNearOrigin{r=4}
+    - ignite{d=60} @EntitiesNearOrigin{r=4}
+    - effect:particlering{particle=Soul_Fire_Flame;speed=0;radius=1;points=8;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=Snowflake;speed=0;radius=1;points=8;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=Soul_Fire_Flame;speed=0;radius=2;points=16;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=Snowflake;speed=0;radius=2;points=16;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=Soul_Fire_Flame;speed=0;radius=3;points=24;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=Snowflake;speed=0;radius=3;points=24;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=Soul_Fire_Flame;speed=0;radius=4;points=32;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=End_Rod;speed=0;radius=1;points=8;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=End_Rod;speed=0;radius=2;points=16;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=End_Rod;speed=0;radius=3;points=24;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:particlering{particle=End_Rod;speed=0;radius=4;points=32;amount=1;hS=0;vS=0;y=0.1} @origin
+    - effect:blockmask{m=blue_ice;d=25;onlyAir=false;radius=2;shape=sphere} @origin
+
+iceyComboProjTick:
+  Skills:
+    - effect:particles{p=dust_color_transition;color=#78BEB5;color2=#4AFFFF;size=1.35;a=1;y=0;speed=0;hs=0;vs=0} @origin
+    - effect:particles{p=Trial_Spawner_Detection_Ominous;a=1;y=0;speed=0;hs=0;vs=0} @origin
+
+Passiveeffect:
+  Skills:
+    - projectile{onTick=PassiveeffectProTick;v=20;i=1;hR=1.5;vR=1.5;StopAtBlock=true;type=METEOR;HeightFromSurface=10;gravity=0.5} @Cone{angle=360;points=9;range=40;rotation=0}
+
+PassiveeffectProTick:
+  Skills:
+    - particles{p=Snowflake;a=3;hS=0;vS=0;speed=0} @origin

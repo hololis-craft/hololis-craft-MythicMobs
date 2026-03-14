@@ -1,0 +1,38 @@
+Iceberg:
+  Id: diamond_sword
+  Display: '<#45AEA3>&m&l&n={&r<#8EC2E5>&m&l&n={&r<#2575D0>&m&l&n={&r&f&m=&r&l*&r&7&m&n&l&ka&r<#25C5D0>❊&r&7&m&n&l&ka&r<gradient:#93D0FF:#455AFF><u>❅&r<gradient:#455AFF:#93D0FF><u><bold>Iceberg&r<gradient:#93D0FF:#455AFF><u>❅&r&7&m&n&l&ka&r<#25C5D0>❊&r&7&m&n&l&ka&r&f&l*&m=&r<#2575D0>&m&l&n}=&r<#8EC2E5>&m&l&n}=&r<#45AEA3>&m&l&n}=&r'
+  Enchantments:
+    - sharpness 5
+    - smite 5
+    - fire_aspect 2
+    - looting 3
+    - sweeping_edge 4
+    - bane_of_arthropods 5
+    - unbreaking 3
+    - mending 1
+  Attributes:
+    mainhand:
+      Damage: 8
+      AttackSpeed: 0.05
+      MovementSpeed: 0.03
+      FallDamageMultiplier: -1
+      MaxAbsorption: 4
+      Health: 4
+    offhand:
+      Damage: 6
+      AttackSpeed: -0.05
+      MovementSpeed: 0.10
+      Health: 4
+  Lore:
+    - '&3&l&m*&r &bhololis craft Packs'
+    - '&f&l&m*---=---=---=---=---=---=---=---=---=---=---*'
+    - '&6&l&m=*&r &f&nSkill&r: &3Frozen souls&r'
+    - '&6&l&m=*&r &f&nSkill&r: &3Below freezing&r'
+    - '&6&l&m*&r &fOn Attackk&r &7&l>>&r &3&oStuns the target for a few seconds.&r'
+    - '&6&l&m*&r &fRight Click&r &7&l>>&r &3&oAttacks using the cold air around them&r'
+    - '&f&l&m*---=---=---=---=---=---=---=---=---=---=---*'
+  Skills:
+    - skill{s=FreezeAttack} ~onAttack
+    - skill{s=iceycombo} ~onUse
+    - skill{s=Passiveeffect} @self ~onTimer:50
+    - effect:particles{p=dust_color_transition;color=#5AE9FF;color2=#0048FF;size=1.15;amount=24;speed=0.01;y=0.8;hs=0.85;vs=1.2} @self ~onTimer:15

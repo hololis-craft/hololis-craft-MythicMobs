@@ -1,0 +1,144 @@
+Elemental:
+  Id: golden_sword
+  Display: '<gradient:#BD0000:#ED4E88><bold><strikethrough> ..=}..=}&r<gradient:#BD0000:#007016><bold><strikethrough><obfuscated>..........&r<gradient:#35E62D:#E6FF2D><bold>Elemental<gradient:#007016:#BD0000><strikethrough><bold><obfuscated>..........&r<gradient:#ED4E88:#BD0000><bold><strikethrough>{=..{=.. &r'
+  Attributes:
+    mainhand:
+      Damage: 9
+      Health: 14
+      AttackSpeed: 0.15
+      MovementSpeed: 0.05
+      KnockbackResistance: 0.07
+  Lore:
+    - '&3&l&m*&r &7&lDestroy everything'
+    - '&3&l&m*&r &bPhonicset-weapons'
+    - '&f&l&m*---=---=---=---=---=---=---=---=---=---=---*'
+    - '&6&l&m=*&r &f&nSkill&r: &3Ultimate Regenerations&r'
+    - '&6&l&m=*&r &f&nSkill&r: &3Drip Poison Arrow&r'
+    - '&6&l&m*&r &fLeft Click&r &7&l))&r &3&oFire arrows to eliminate the enemy.&r'
+    - '&6&l&m*&r &fPassive&r &7&l>>&r &3&oComplete regeneration of body wounds.&r'
+    - '&f&l&m*---=---=---=---=---=---=---=---=---=---=---*'
+  Enchantments:
+    - SHARPNESS 8
+    - SMITE 8
+    - BANE_OF_ARTHROPODS 6
+    - SWEEPING_EDGE 8
+    - FIRE_ASPECT 6
+    - LOOTING 7
+    - KNOCKBACK 5
+    - IMPALING 6
+    - VANISHING_CURSE 1
+  Options:
+    Unbreakable: true
+  Skills:
+    - skill{s=phonicskill} ~onSwing
+    - skill{s=phonicEffectOnAttack} ~onAttack
+    - potion{t=regeneration;d=50;l=4;force=true} @Self ~onTimer:200
+    - potion{t=saturation;d=3;l=1;force=true} @Self ~onTimer:240
+Elementalskillsitems:
+  Id: nether_star
+  Enchantments:
+    - SILK_TOUCH 1
+  Hide:
+    - ENCHANTS
+phonicmjollnirskillsitems2:
+  Id: gunpowder
+  Enchantments:
+    - SILK_TOUCH 1
+  Hide:
+    - ENCHANTS
+phonicsetmjollnir1:
+  Id: mace
+  Display: '&4&m&l&ka&r<gradient:#BD0000:#ED4E88><bold><strikethrough>=≫({(=≫<obfuscated>a.a&r<gradient:#FDDD4E:#E19545><bold>&n⚡Mjollnir⚡&r<gradient:#ED4E88:#D93A88><bold><strikethrough><obfuscated>a.a&r<gradient:#ED4E88:#BD0000><bold><strikethrough>≪=)})≪=&r&4&m&l&ka&r'
+  Attributes:
+    mainhand:
+      Damage: 9
+      Health: 8
+      AttackSpeed: -0.85
+      MovementSpeed: 0.07
+      Maxabsorption: 6
+  Lore:
+    - '<#BC0F4D>&m&l*&r &6&lAncient legends'
+    - '<#BC0F4D>&l&m*&r &6&lPhonicset-weapons'
+    - '<gradient:#ffaa00:#aa0000><bold>*============================*'
+    - '<#EF3D63><bold><strikethrough>=*&r &8&nSkill&r: <#E03989>Judgement by the God of Thunder&r'
+    - '<#EF3D63><bold><strikethrough>=*&r &8&nSkill&r: <#E03989>Binding &r'
+    - '<#EF3D63><bold><strikethrough>*&r &8Right Click &l))&r &7&oEradicate everything you see with your eyes.&r'
+    - '<#EF3D63><bold><strikethrough>*&r &8Shift + Left Click &l))&r &7&oCurse to restrain the enemy.'
+    - '<gradient:#aa0000:#ffaa00><bold>*============================*'
+  Enchantments:
+    - SHARPNESS 7
+    - SMITE 8
+    - BANE_OF_ARTHROPODS 7
+    - SWEEPING_EDGE 8
+    - FIRE_ASPECT 6
+    - LOOTING 6
+    - KNOCKBACK 2
+    - VANISHING_CURSE 1
+    - BREACH 7
+    - DENSITY 8
+    - WIND_BURST 5
+    - MENDING 3
+    - UNBREAKING 9
+    - IMPALING 9
+  Skills:
+    - skill{s=phonicmjollnirskill1} ~onUse
+    - skill{s=SwirlPrisonDebuff} ~onSwing
+    - itemspray{item=phonicmjollnirskillsitems2;amount=6;velocity=0.45;d=45;r=2.15;yf=0.5;gravity=false} @self ~onTimer:35
+phonicsetmjollnir2:
+  Id: mace
+  Durability: 999
+  MaxDurability: 1000
+  Display: '&4&m&l&ka&r<gradient:#BD0000:#ED4E88><bold><strikethrough>=≫({(=≫<obfuscated>a.a&r<gradient:#FDDD4E:#E19545><bold>&n⚡Rusted-Mjollnir⚡&r<gradient:#ED4E88:#D93A88><bold><strikethrough><obfuscated>a.a&r<gradient:#ED4E88:#BD0000><bold><strikethrough>≪=)})≪=&r&4&m&l&ka&r'
+  Attributes:
+    mainhand:
+      Damage: -99
+      Health: -30
+      AttackSpeed: -1
+      MovementSpeed: -0.5
+      Maxabsorption: -666
+  Lore:
+    - '<#BC0F4D>&m&l*&r &6&lAncient legends'
+    - '<#BC0F4D>&l&m*&r &6&lPhonicset-weapons'
+    - '<gradient:#ffaa00:#aa0000><bold>*============================*'
+    - '<#EF3D63><bold><strikethrough>=*&r &8They seem to have lost their former strength.'
+    - '<#EF3D63><bold><strikethrough>=*&r &8Ragged and unusable.'
+    - '<gradient:#aa0000:#ffaa00><bold>*============================*'
+  Enchantments:
+    - VANISHING_CURSE 10
+Poseidon:
+  Id: trident
+  Display: '<gradient:#0f698c:#058cfa><bold><strikethrough>&n-*⇥⇥⇥*-&r&f&m&l.,;&ka&r <gradient:#05eafa:#09b35e><bold>&n🔘 Poseidon 🔘&r &f&m&l&ka&r&f&m&l;,.&r<gradient:#058cfa:#0f698c><bold><strikethrough>&n-*⇤⇤⇤*-&r'
+  Attributes:
+    mainhand:
+      Damage: 9
+      Health: 6
+      AttackSpeed: 0.15
+      MovementSpeed: 0.05
+      KnockbackResistance: 0.07
+  Lore:
+    - '&3&l&m*&r &2&lNatural disaster'
+    - '&3&l&m*&r &bPhonicset-weapons'
+    - '<gradient:#13d49d:#1c98e6><bold>*============================*'
+    - '&3&l&m=*&r &b&nSkill&r: &3Neptune Protection&r'
+    - '&3&l&m=*&r &b&nSkill&r: &3AAAA&r'
+    - '&3&l&m*&r &2Shift + Right Click&r &7&l))&r &3&oPoseidon defence.&r'
+    - '&3&l&m*&r &2Passive&r &7&l>>&r &3&oAAAA.&r'
+    - '<gradient:#1c98e6:#13d49d><bold>*============================*'
+  Enchantments:
+    - SHARPNESS 7
+    - SMITE 7
+    - BANE_OF_ARTHROPODS 7
+    - SWEEPING_EDGE 10
+    - FIRE_ASPECT 5
+    - LOOTING 5
+    - KNOCKBACK 4
+    - IMPALING 8
+    - CHANNELING 10
+    - LOYALTY 10
+    - VANISHING_CURSE 1
+  Options:
+    Unbreakable: true
+  Skills:
+    - skill{s=poseidonwhenmainhand1} @self ~onTimer:60
+    - skill{s=poseidonProrepeats} ~onUse
+    - skill{s=poseidonProprepare} ~onSwing

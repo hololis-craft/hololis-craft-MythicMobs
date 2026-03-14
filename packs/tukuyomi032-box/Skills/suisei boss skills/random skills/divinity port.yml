@@ -1,3 +1,5 @@
+#ボス自身を中心とした周囲8マス内を対称にランダムにテレポート→ボスのTP地点を原点として360度に円形のパーティクル攻撃を放つ
+#↑10回繰り返す
 divinityport:
   Skills:
     - runAIGoalSelector{goal=clear} @self
@@ -48,10 +50,10 @@ divinityporttick:
 DivPortProjTick:
   Skills:
     - effect:particles{p=dust_color_transition;color1=#34FFFF;color2=#0000FF;size=1.5;amount=1;speed=0;hR=0;vR=0} @origin
+DivPortProjTick1:
+  Skills:
+    - effect:particles{p=End_Rod;amount=4;speed=0;hS=0;vS=0} @origin
 DivPortProjHit:
   Skills:
     - damage{a=5;ia=true;ignoreenchants=true;preventimmunity=true;pk=true} @EntitiesNearOrigin{r=3}
     - effect:sound{s=entity.shulker_bullet.hurt;v=1;p=2}
-DivPortProjTick1:
-  Skills:
-    - effect:particles{p=End_Rod;amount=4;speed=0;hS=0;vS=0} @origin

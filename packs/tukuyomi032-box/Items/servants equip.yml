@@ -1,0 +1,31 @@
+#雑魚モブの装備の定義
+servanthead1:
+  Id: leather_helmet
+  Display: 'servants helmet'
+  Options:
+    Unbreakable: true
+    Glint: true
+servantchest1:
+  Id: leather_chestplate
+  Display: 'servants chestplate'
+  Options:
+    Unbreakable: true
+    Glint: true
+servantlegs1:
+  Id: leather_leggings
+  Display: 'servants leggings'
+  Options:
+    Unbreakable: true
+    Glint: true
+servantfeet1:
+  Id: leather_boots
+  Display: 'servants boots'
+  Options:
+    Unbreakable: true
+    Glint: true
+servantweapon1:
+  Id: iron_sword
+  Display: 'servants weapon'
+  Options:
+    Unbreakable: true
+    Glint: true

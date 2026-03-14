@@ -1,0 +1,12 @@
+suisei_train_base:
+  Type: minecart
+  Display: ''
+
+suisei_train_rider:
+  Type: skeleton
+  Equipment:
+    - PLAYER_HEAD{skullTexture=e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTVkYmZhYWQyMTg3NTQ5ZjJhMWI0NGUyODlkN2JiMTkyOTQwMDZkZWY2Mjk3NGY2YTVmNGY4MzY2ZTI4NjlhNiJ9fX0=} HEAD
+    - LEATHER_CHESTPLATE{color=77,146,235} CHEST
+    - LEATHER_LEGGINGS{color=77,146,235} LEGS
+    - LEATHER_BOOTS{color=77,146,235} FEET
+  Drops: []

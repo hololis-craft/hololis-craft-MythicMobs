@@ -1,0 +1,28 @@
+#雑魚モブ
+#ボスの使用する雑魚モブを召喚するスキルにて使用
+servant1:
+  Mobtype: skeleton
+  Display: '<#000000>&m&k&n&l;;;'
+  Health: 250
+  Damage: 0
+  DamageModifiers:
+    - DROWNING 0
+  Equipment:
+    - servanthead1 HEAD
+    - servantchest1 CHEST
+    - servantlegs1 LEGS
+    - servantfeet1 FEET
+    - servantweapon1 HAND
+  Options:
+    FollowRange: 50
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    Despawn: true
+    Silent: false
+    PreventItemPickup: true
+  Skills:
+    - skill{s=antifire} ~onDamaged
+    - skill{s=combatleap} ~onTimer:170 0.4
+    - skill{s=damagecombo} ~onAttack 0.1
+    - skill{s=Whirlwind} ~onTimer:100 0.7

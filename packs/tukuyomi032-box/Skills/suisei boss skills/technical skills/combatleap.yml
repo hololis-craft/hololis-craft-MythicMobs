@@ -1,25 +1,37 @@
-combatleap:
-  Cooldown: 2
-  Conditions:
-    - stance{stance=suisei-second-phase} true
-    - stance{stance=suisei-second-phase-like} false
-    - stance{stance=suisei-death} false
-    - incombat
-  Skills:
-    - projectile{ot=[ - teleport @origin ];v=5;g=2;hr=2.5;vr=2.5;se=false;i=1;tyo=3;oe=combatleapEnd} @TL
-    - delay 200
-    - skill{s=combatleap} @self
+#ターゲットに向かって３回大きく跳躍し距離を縮める
+#トリッキーな動きでボス戦の難易度が跳ね上がるため使用の検討が必要
+#combatleap:
+Skills:
+  - projectile{ot=[ - teleport @origin ];v=10;g=1;hr=2.5;vr=2.5;se=false;i=1;tyo=3;oe=combatleapEnd} @TL
+  - delay 200
+  - skill{s=combatleap} @self
 
-combatleapEnd:
-  Conditions:
-    - incombat
-  Skills:
-    - delay 5
-    - projectile{ot=[ - teleport @origin];v=9;g=2;hr=2.5;vr=2.5;se=false;i=1;tyo=3;oe=combatleapEnd2} @TL
+#combatleapEnd:
+Conditions:
+  - incombat
+  #Skills:
+  - delay 5
+  - projectile{ot=[ - teleport @origin];v=11;g=2;hr=2.5;vr=2.5;se=false;i=1;tyo=3;oe=combatleapEnd2} @TL
 
-combatleapEnd2:
-  Conditions:
-    - incombat
-  Skills:
-    - delay 5
-    - projectile{ot=[ - teleport @origin];v=15;g=2;hr=2.5;vr=2.5;se=false;i=1;tyo=3} @TL
+  #combatleapEnd2:
+  #Conditions:
+  - incombat
+  #Skills:
+  - delay 5
+  - projectile{ot=[ - teleport @origin];v=10;g=0.5;hr=2.5;vr=2.5;se=false;i=1;tyo=3} @TL
+  #Whirlwind:
+  #Cooldown: 2
+  #Skills:
+  #- leap{velocity=1150} @targetlocation
+  #- effect:sound{s=entity.witch.throw;v=2.5;p=0.45} @self
+  #- effect:sound{s=item.trident.riptide_3;v=5;p=0} @self
+  #- effect:particlesphere{particle=reddust;color=#F7F136;amount=50;radius=3.5} @self
+  #- effect:particlesphere{particle=Electric_Spark;amount=120;radius=2.5} @self
+  #- particlelinehelix{Fo=true;db=0.4;hl=4.8;syo=0.75;p=Trial_Spawner_Detection;hr=1.5;md=45} @targetlocation
+  #- skill{s=WhirlwindDamage;repeat=5;repeatInterval=1.7}
+  #WhirlwindDamage:
+  #Skills:
+  - damage{a=4;ia=false;ignoreenchants=true;preventimmunity=true;pk=true} @EIR{r=5;ignore=animals,villagers,npc,armorstand,player}
+  - effect:particlesphere{particle=Electric_Spark;amount=50;radius=1.75} @self
+  - delay 15
+  - velocity{m=add;x=0;y=0.003;z=0} @self

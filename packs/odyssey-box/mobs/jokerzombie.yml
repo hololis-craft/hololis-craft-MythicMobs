@@ -1,0 +1,50 @@
+JokerZombie:
+  Type: zombie
+  Display: 'JokerZombie'
+  Health: 1000
+  Damage: 10.5
+  Armor: 10
+  HealthBar:
+    Enabled: true
+    Offset: 1
+  BossBar:
+    Enabled: true
+    Title: '<gradient:#FF7F50:#9932CC>&m* &kaaaaaa&r<#9932CC>&m *&r <gradient:#0000FF:#AFEEEE>JokerZombie &r<gradient:#FF7F50:#9932CC>&m* &kaaaaaa&r<#9932CC>&m *&r'
+    Range: 20
+    Color: PURPLE
+    Style: SEGMENTED_10
+    CreateFog: false
+    DarkenSky: false
+    PlayMusic: true
+  AIGoalSelectors:
+    - clear
+    - meleeattack
+    - randomstroll
+  AITargetSelectors:
+    - clear
+    - players
+    - golems
+  Options:
+    AttackSpeed: 1.5
+    Despawn: NO
+    KnockbackResistance: 1
+    MovementSpeed: 0.2
+    Scale: 1.14
+  Drops:
+    - JokerSword 1 0.05
+    - JokerHelmet 1 0.0001
+    - diamond 3-6 0.3
+    - exp 100
+  DamageModifiers:
+    - ENTITY_ATTACK 1
+    - PROJECTILE 2
+  Equipment:
+    - JokerSword HAND
+    - Jokersethelmet HEAD
+    - Jokersetchestplate CHEST
+    - Jokersetleggings LEGS
+    - Jokersetboots FEET
+  KillMessages:
+    - '&6<target.name>は&c&m* &4&ka&4a&ca&4a&ca&4a &r&c&m *&r &9Joker&bZombie &r&c&m* &4&ka&4a&ca&4a&ca&4a &r&c&m *&r&6に葬られた。'
+  Skills:
+    - ignite{ticks=100} @target ~onAttack <50% 0.5

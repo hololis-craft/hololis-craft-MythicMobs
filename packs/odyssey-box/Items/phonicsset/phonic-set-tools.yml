@@ -1,0 +1,58 @@
+PhonicsetPickaxe:
+  Id: 'netherite_pickaxe'
+  Display: '<gradient:#DC51C5:#4698D8><bold><strikethrough>.,;[{&r<gradient:#4698D8:#A451C5><bold><strikethrough><obfuscated>.a;:a:;a.&r<gradient:#A451C5:#DC51C5><bold><strikethrough>}];,.&r<gradient:#E38D37:#E3E237><bold>Gold Digger&r<gradient:#4698D8:#DC51C5><bold><strikethrough>.,;[{&r<gradient:#DC51C5:#A451C5><bold><strikethrough><obfuscated>.a;:a:;a.&r<gradient:#A451C5:#4698D8><bold><strikethrough>}];,.&r'
+  Material: NETHERITE_PICKAXE
+  Attributes:
+    mainhand:
+      Damage: 6
+      AttackSpeed: 0.05
+      MovementSpeed: 0.08
+      FallDamageMultiplier: 0.95
+      MaxAbsorption: 16
+      Health: 6
+  Lore:
+    - '&6&l&m*&r &7the ultimate pickaxe'
+    - '&6&l&m*&r &bPhonicset-tools'
+    - '<gradient:#E38D37:#E3E237>&l&m*===*===*===*===*===*===*===*===*===*===*'
+    - '&6&l&m*&r &f&oSkill:&r &eSuper Efficiency'
+    - '&6&l&m*&r &fPassive&r &e»&r &eGrant special buffs while holding'
+    - '<gradient:#E38D37:#E3E237>&l&m*===*===*===*===*===*===*===*===*===*===*'
+  Enchantments:
+    - FIRE_ASPECT 4
+    - UNBREAKING 7
+    - FORTUNE 5
+    - EFFICIENCY 10
+    - MENDING 1
+    - VANISHING_CURSE 1
+  Skills:
+    - potion{t=HASTE;d=200;l=4;force=true} @Self ~onTimer:400
+    - potion{t=SLOWNESS;d=150;l=2;force=true} @Self ~onTimer:300
+PhonicsetPickaxe2:
+  Id: 'netherite_pickaxe'
+  Display: '<gradient:#DC51C5:#4698D8><bold><strikethrough>.,;[{&r<gradient:#4698D8:#A451C5><bold><strikethrough><obfuscated>.a;:a:;a.&r<gradient:#A451C5:#DC51C5><bold><strikethrough>}];,.&r<gradient:#E38D37:#E3E237><bold>Gold Digger&r<gradient:#4698D8:#DC51C5><bold><strikethrough>.,;[{&r<gradient:#DC51C5:#A451C5><bold><strikethrough><obfuscated>.a;:a:;a.&r<gradient:#A451C5:#4698D8><bold><strikethrough>}];,.&r'
+  Material: NETHERITE_PICKAXE
+  Attributes:
+    mainhand:
+      Damage: 6
+      AttackSpeed: 0.05
+      MovementSpeed: 0.08
+      FallDamageMultiplier: 0.95
+      MaxAbsorption: 16
+      Health: 6
+  Lore:
+    - '&6&l&m*&r &7the ultimate pickaxe'
+    - '&6&l&m*&r &bPhonicset-tools'
+    - '<gradient:#E38D37:#E3E237>&l&m*===*===*===*===*===*===*===*===*===*===*'
+    - '&6&l&m*&r &f&oSkill:&r &eSuper Efficiency'
+    - '&6&l&m*&r &fPassive&r &e»&r &eGrant special buffs while holding'
+    - '<gradient:#E38D37:#E3E237>&l&m*===*===*===*===*===*===*===*===*===*===*'
+  Enchantments:
+    - FIRE_ASPECT 4
+    - UNBREAKING 7
+    - SILK_TOUCH 1
+    - EFFICIENCY 10
+    - MENDING 1
+    - VANISHING_CURSE 1
+  Skills:
+    - potion{t=HASTE;d=200;l=4;force=true} @Self ~onTimer:400
+    - potion{t=SLOWNESS;d=150;l=2;force=true} @Self ~onTimer:300

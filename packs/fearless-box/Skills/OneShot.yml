@@ -1,0 +1,19 @@
+SuperArrow:
+  Cooldown: 1
+  Skills:
+    - damage{a=6;ia=false;ignoreenchants=true;preventimmunity=false;pk=false} @target{target=monster}
+    - effect:particles{particle=explosion;amount=2;hS=1;vS=1;speed=0.1} @target
+    - effect:sound{s=item.trident.thunder;v=1.0;p=0.6} @self
+    - effect:particlering{particle=end_rod;radius=1;points=8;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 1
+    - effect:particlering{particle=end_rod;radius=2.5;points=24;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 1
+    - effect:particlering{particle=end_rod;radius=4;points=36;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 1
+    - particlesphere{particle=Trial_Spawner_Detection;amount=50;radius=4.5} @target
+Arrowswarm:
+  Cooldown: 120
+  Skills:
+    - effect:sound{s=item.trident.riptide_3} @self
+    - delay 5
+    - arrowvolley{a=20;s=95;v=15;rd=140;repeat=8;repeatInterval=7} @TargetLocation

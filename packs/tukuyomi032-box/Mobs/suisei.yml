@@ -1,13 +1,8 @@
+#ボス本体の定義
 suisei:
   Type: SKELETON
   Display: '<gradient:#3D31FF:#3DF2FF><bold>星街すいせい'
   Health: 5000
-  Options:
-    MovementSpeed: 0.3
-    PreventOtherDrops: true
-    Silent: true
-    Despawn: true
-    AlwaysShowName: false
   Equipment:
     - suiArmorHead1
     - suiArmorChest1
@@ -25,6 +20,18 @@ suisei:
   AITargetSelectors:
     - 0 clear
     - 1 players
+  Options:
+    FollowRange: 100
+    AlwaysShowName: false
+    KnockbackResistance: 1
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventSunburn: true
+    ShowHealth: true
+    Despawn: true
+    PreventItemPickup: true
+    Silent: true
+    PreventRandomEquipment: true
   KillMessages:
     - '&f&l&o<target.name>は&r&9すいちゃん&rによって&b&l彗星&rとなった。'
   Modules:
@@ -56,4 +63,3 @@ suisei:
     Range: 20
     Color: BLUE
     Style: SEGMENTED_20
-    PlayMusic: true

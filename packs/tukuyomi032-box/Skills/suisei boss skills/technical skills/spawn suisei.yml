@@ -1,3 +1,4 @@
+#ボス召喚時のモーション
 spawnsuisei:
   Skills:
     - throw{velocity=6;velocityY=3} @EIR{r=3}

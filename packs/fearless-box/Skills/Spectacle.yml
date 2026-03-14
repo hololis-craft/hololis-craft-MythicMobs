@@ -1,0 +1,42 @@
+SmitePower:
+  Cooldown: 3.75
+  Conditions:
+    - crouching true
+    - onground false
+  Skills:
+    - jump{v=1.85}
+    - effect:sound{s=entity.wind_charge.wind_burst;v=6.0;p=0} @self
+    - effect:particles{particle=explosion;amount=25;hS=1;vS=1;speed=0.1} @self
+    - effect:particles{particle=reddust;amount=25;hS=1;vS=1;speed=0.1;color=#ffffff} @self
+    - potion{t=GLOWING;d=51;l=0;force=true} @Self
+    - potion{t=REGENERATION;d=60;l=2;force=true} @Self
+    - effect:particlering{particle=sweepattack;radius=1;points=8;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 1
+    - effect:particlering{particle=sweepattack;radius=2.5;points=24;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 1
+    - effect:particlering{particle=sweepattack;radius=4;points=36;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 1
+    - effect:particlering{particle=sweepattack;radius=5.5;points=54;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 2
+    - effect:particlering{particle=sweepattack;radius=7;points=81;amount=1;hS=0;vS=0;y=0.1} @self
+    - delay 2
+    - effect:particlering{particle=sweepattack;radius=8.5;points=131;amount=1;hS=0;vS=0;y=0.1} @self
+Whirlwind:
+  Cooldown: 6.5
+  Conditions:
+    - crouching false
+    - onground false
+  Skills:
+    - leap{velocity=1150} @targetlocation
+    - effect:sound{s=entity.witch.throw;v=2.5;p=0.45} @self
+    - effect:sound{s=item.trident.riptide_3;v=5;p=0} @self
+    - effect:particlesphere{particle=reddust;color=#F7F136;amount=50;radius=3.5} @self
+    - effect:particlesphere{particle=Electric_Spark;amount=120;radius=2.5} @self
+    - particlelinehelix{Fo=true;db=0.4;hl=4.8;syo=0.75;p=Trial_Spawner_Detection;hr=1.5;md=45} @targetlocation
+    - skill{s=WhirlwindDamage;repeat=5;repeatInterval=1.7}
+WhirlwindDamage:
+  Skills:
+    - damage{a=4;ia=false;ignoreenchants=true;preventimmunity=true;pk=true} @EIR{r=5;ignore=animals,villagers,npc,armorstand,player}
+    - effect:particlesphere{particle=Electric_Spark;amount=50;radius=1.75} @self
+    - delay 60
+    - velocity{m=add;x=0;y=0.003;z=0} @self

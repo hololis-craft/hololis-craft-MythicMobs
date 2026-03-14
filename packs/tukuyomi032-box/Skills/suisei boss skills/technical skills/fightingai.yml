@@ -1,3 +1,4 @@
+#ボスの戦闘AI定義
 fightingai:
   Skills:
     - threat{a=0} @PlayersInWorld

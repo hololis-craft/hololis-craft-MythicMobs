@@ -1,3 +1,4 @@
+#ボスのスキル抽選をする
 suiseiskillselect:
   Conditions:
     - stance{stance=suisei-second-phase-like} false
@@ -5,6 +6,7 @@ suiseiskillselect:
     - stance{stance=suisei-death} false
   Skills:
     - randomskill{skills=retroshoot,caughtrap,leapsphere,divinityport,strikewave1,dragontransformation}
+#第2形態用
 suiseisecondphaseskill:
   Conditions:
     - stance{stance=suisei-second-phase} true

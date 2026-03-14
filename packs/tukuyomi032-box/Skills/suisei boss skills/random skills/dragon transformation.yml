@@ -1,3 +1,4 @@
+#ドラゴンに一時的に変装(disguise)し、ターゲットに向かって突進しダメージを与える
 dragontransformation:
   Skills:
     - throw{velocity=4;velocityY=0;repeat=20;repeatInterval=1} @PlayersInRadius{r=20}

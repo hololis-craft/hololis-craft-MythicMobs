@@ -1,0 +1,122 @@
+Fearlesssethelmet:
+  Id: diamond_helmet
+  Display: '&8&m⦕&r&7&m⦕&r&f&m⦕&r&c&l&m❖&l&ka:a&r&c&l&m❖&r&7&l&m(&r&6&lF&r&e&le&r&6&la&r&e&lr&r&6&ll&r&e&le&r&6&ls&r&e&ls&r &c&l*&r&f&lset&r&c&l*&r &6&lHelmet&r&7&m&l}&r&c&l&m❖&r&c&l&m&ka:a&r&c&l&m❖&r&f&m⦖&r&7&m⦖&r&8&m⦖'
+  Attributes:
+    Head:
+      Armor: 3
+      Health: 6
+      ArmorToughness: 2.5
+      KnockbackResistance: 0.05
+      MovementSpeed: 0.02
+  Enchantments:
+    - PROTECTION 4
+    - BLAST_PROTECTION 4
+    - PROTECTION_FIRE 4
+    - PROJECTILE_PROTECTION 4
+    - AQUA_AFFINITY 1
+    - RESPIRATION 4
+    - THORNS 3
+    - VANISHING_CURSE 1
+    - UNBREAKING 4
+    - MENDING 1
+  Lore:
+    - '&3&l&m*&r &c&l&oTitanium alloy armor'
+    - '&3&l&m*&r &6F&r&ee&r&6a&r&er&r&6l&r&ee&r&6s&r&es&r&7Pack'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'
+    - '&f&m=&r&bSkill: &cPoison isolation'
+    - '&f&m=&r&6Passive&r &f>>&6 Immunity to poison'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'
+  Skills:
+    - skill{s=indomitablespirit} ~onDamaged
+    - itemspray{item=Fearlesssetitemsprayitems;amount=2;velocity=0.3;d=25;r=0.45;yf=1.35} @self ~onTimer:35
+Fearlesssetchestplate:
+  Id: diamond_chestplate
+  Display: '&8&m⦕&r&7&m⦕&r&f&m⦕&r&c&l&m❖&l&ka:a&r&c&l&m❖&r&7&l&m(&r&6&lF&r&e&le&r&6&la&r&e&lr&r&6&ll&r&e&le&r&6&ls&r&e&ls&r &c&l*&r&f&lset&r&c&l*&r &6&lChestplate&r&7&m&l}&r&c&l&m❖&r&c&l&m&ka:a&r&c&l&m❖&r&f&m⦖&r&7&m⦖&r&8&m⦖'
+  Attributes:
+    Chest:
+      Armor: 8
+      Health: 6
+      ArmorToughness: 3.5
+      KnockbackResistance: 0.03
+      MovementSpeed: 0.04
+  Enchantments:
+    - PROTECTION 5
+    - BLAST_PROTECTION 4
+    - PROTECTION_FIRE 3
+    - PROJECTILE_PROTECTION 4
+    - THORNS 4
+    - VANISHING_CURSE 1
+    - UNBREAKING 4
+    - MENDING 1
+  Lore:
+    - '&3&l&m*&r &c&l&oTitanium alloy armor'
+    - '&3&l&m*&r &6F&r&ee&r&6a&r&er&r&6l&r&ee&r&6s&r&es&r&7Pack'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'
+    - '&f&m=&r&6Adversity makes people wise'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'
+  Skills:
+    - itemspray{item=Fearlesssetitemsprayitems;amount=3;velocity=0.3;d=25;r=0.75;yf=1.15} @self ~onTimer:35
+Fearlesssetleggings:
+  Id: diamond_leggings
+  Display: '&8&m⦕&r&7&m⦕&r&f&m⦕&r&c&l&m❖&l&ka:a&r&c&l&m❖&r&7&l&m(&r&6&lF&r&e&le&r&6&la&r&e&lr&r&6&ll&r&e&le&r&6&ls&r&e&ls&r &c&l*&r&f&lset&r&c&l*&r &6&lLeggings&r&7&m&l}&r&c&l&m❖&r&c&l&m&ka:a&r&c&l&m❖&r&f&m⦖&r&7&m⦖&r&8&m⦖'
+  Attributes:
+    Legs:
+      Armor: 6
+      Health: 6
+      ArmorToughness: 4
+      KnockbackResistance: 0.01
+      MovementSpeed: 0.02
+  Enchantments:
+    - PROTECTION 5
+    - BLAST_PROTECTION 4
+    - PROTECTION_FIRE 4
+    - PROJECTILE_PROTECTION 4
+    - SWIFT_SNEAK 3
+    - THORNS 4
+    - VANISHING_CURSE 1
+    - UNBREAKING 6
+    - MENDING 1
+  Lore:
+    - '&3&l&m*&r &c&l&oTitanium alloy armor'
+    - '&3&l&m*&r &6F&r&ee&r&6a&r&er&r&6l&r&ee&r&6s&r&es&r&7Pack'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'
+    - '&f&m=&r&6Adversity makes people wise'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'
+  Skills:
+    - itemspray{item=Fearlesssetitemsprayitems;amount=2;velocity=0.3;d=25;r=1.15;yf=0.75} @self ~onTimer:35
+Fearlesssetboots:
+  Id: diamond_boots
+  Display: '&8&m⦕&r&7&m⦕&r&f&m⦕&r&c&l&m❖&l&ka:a&r&c&l&m❖&r&7&l&m(&r&6&lF&r&e&le&r&6&la&r&e&lr&r&6&ll&r&e&le&r&6&ls&r&e&ls&r &c&l*&r&f&lset&r&c&l*&r &6&lBoots&r&7&m&l}&r&c&l&m❖&r&c&l&m&ka:a&r&c&l&m❖&r&f&m⦖&r&7&m⦖&r&8&m⦖'
+  Attributes:
+    Feet:
+      Armor: 3
+      Health: 6
+      ArmorToughness: 2.5
+      KnockbackResistance: 0.01
+      MovementSpeed: 0.02
+  Enchantments:
+    - PROTECTION 4
+    - BLAST_PROTECTION 4
+    - PROTECTION_FIRE 3
+    - PROJECTILE_PROTECTION 3
+    - FEATHER_FALLING 3
+    - SOUL_SPEED 4
+    - THORNS 4
+    - VANISHING_CURSE 1
+    - DEPTH_STRIDER 5
+    - UNBREAKING 4
+    - MENDING 1
+  Lore:
+    - '&3&l&m*&r &c&l&oTitanium alloy armor'
+    - '&3&l&m*&r &6F&r&ee&r&6a&r&er&r&6l&r&ee&r&6s&r&es&r&7Pack'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'
+    - '&f&m=&r&6Adversity makes people wise'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'
+  Skills:
+    - itemspray{item=Fearlesssetitemsprayitems;amount=1;velocity=0.3;d=25;r=1.55;yf=0.25} @self ~onTimer:35
+Fearlesssetitemsprayitems:
+  Id: blue_ice
+  Enchantments:
+    - SILK_TOUCH 1
+  Hide:
+    - ENCHANTS

@@ -1,3 +1,5 @@
+#デバッグ用アイテム
+#ボス用に作成したスキルをプレイヤー側で使用し挙動を確認するため
 testweapon:
   Id: stick
   Display: 'teststick'

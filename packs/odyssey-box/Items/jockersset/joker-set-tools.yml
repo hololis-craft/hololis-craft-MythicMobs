@@ -1,0 +1,114 @@
+JokersetPickaxe:
+  Id: 'iron_pickaxe'
+  Display: '<gradient:#FFA500:#00FFFF>&l&m* === * &r<#00FF7F>&m&kaaa&r <gradient:#00FFFF:#0000FF>&lJokerset&r &6&l&ka&r <gradient:#00FFFF:#0000FF>&lPickaxe&r <#00FF7F>&l&m&kaaa &r<gradient:#00FFFF:#FFA500>&l&m * === *&r'
+  Material: IRON_PICKAXE
+  Attributes:
+    mainhand:
+      Damage: 5
+      AttackSpeed: -0.80
+      MovementSpeed: 0.035
+      FallDamageMultiplier: 0.75
+      MaxAbsorption: 1
+  Lore:
+    - '&6&l&m*&r &7better efficiency than vanilla tools'
+    - '&6&l&m*&r &bJokerSet-tools'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+    - '&3&l&m*&r &6&oSkill:&r &7haste mode'
+    - '&3&l&m*&r &7Passive&r &8»&r &bperiodic increase in mining speed'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+  Enchantments:
+    - FIRE_ASPECT 1
+    - KNOCKBACK 4
+    - UNBREAKING 4
+    - FORTUNE 3
+    - EFFICIENCY 6
+  Skills:
+    - potion{t=HASTE;d=60;l=1;force=true} @Self ~onTimer:200
+    - potion{t=SLOWNESS;d=60;l=1;force=true} @Self ~onTimer:200
+JokersetPickaxe2:
+  Id: 'iron_pickaxe'
+  Display: '<gradient:#FFA500:#00FFFF>&l&m* === * &r<#00FF7F>&m&kaaa&r <gradient:#00FFFF:#0000FF>&lJokerset&r &6&l&ka&r <gradient:#00FFFF:#0000FF>&lPickaxe&r <#00FF7F>&l&m&kaaa &r<gradient:#00FFFF:#FFA500>&l&m * === *&r'
+  Material: IRON_PICKAXE
+  Attributes:
+    mainhand:
+      Damage: 5
+      AttackSpeed: -0.80
+      MovementSpeed: 0.035
+      FallDamageMultiplier: 0.75
+      MaxAbsorption: 1
+  Lore:
+    - '&6&l&m*&r &7better efficiency than vanilla tools'
+    - '&6&l&m*&r &bJokerSet-tools'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+    - '&3&l&m*&r &6&oSkill:&r &7haste mode'
+    - '&3&l&m*&r &7Passive&r &8»&r &bperiodic increase in mining speed'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+  Enchantments:
+    - FIRE_ASPECT 1
+    - KNOCKBACK 4
+    - UNBREAKING 4
+    - SILK_TOUCH 1
+    - EFFICIENCY 6
+  Skills:
+    - potion{t=HASTE;d=60;l=1;force=true} @Self ~onTimer:200
+    - potion{t=SLOWNESS;d=60;l=1;force=true} @Self ~onTimer:200
+
+JokersetShovel:
+  kersetPickaxe:
+  Id: 'iron_shovel'
+  Display: '<gradient:#FFA500:#00FFFF>&l&m* === * &r<#00FF7F>&m&kaaa&r <gradient:#00FFFF:#0000FF>&lJokerset&r &6&l&ka&r <gradient:#00FFFF:#0000FF>&lShovel&r <#00FF7F>&l&m&kaaa &r<gradient:#00FFFF:#FFA500>&l&m * === *&r'
+  Attributes:
+    mainhand:
+      Damage: 3.9
+      AttackSpeed: -0.85
+      MovementSpeed: 0.06
+      FallDamageMultiplier: 0.90
+      MaxAbsorption: 0.5
+      ArmorToughness: -0.02
+      StepHeight: 1.5
+  Lore:
+    - '&6&l&m*&r &7better efficiency than vanilla tools'
+    - '&6&l&m*&r &bJokerSet-tools'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*===*===*===*'
+    - '&3&l&m*&r &6&oSkill:&r &7haste mode'
+    - '&3&l&m*&r &7Crouching + Right Click&r &8»&r &bConsume 64 dirt to increase mining speed'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*===*===*===*'
+  Enchantments:
+    - FIRE_ASPECT 1
+    - KNOCKBACK 1
+    - UNBREAKING 4
+    - EFFICIENCY 7
+    - FORTUNE 2
+  Skills:
+    - skill{s=jokerskillshovel} ~onUse
+    - skill{s=jokerskillshovelfail} ~onFail
+
+JokersetShovel2:
+  kersetPickaxe:
+  Id: 'iron_shovel'
+  Display: '<gradient:#FFA500:#00FFFF>&l&m* === * &r<#00FF7F>&m&kaaa&r <gradient:#00FFFF:#0000FF>&lJokerset&r &6&l&ka&r <gradient:#00FFFF:#0000FF>&lShovel&r <#00FF7F>&l&m&kaaa &r<gradient:#00FFFF:#FFA500>&l&m * === *&r'
+  Attributes:
+    mainhand:
+      Damage: 3.9
+      AttackSpeed: -0.95
+      MovementSpeed: 0.06
+      FallDamageMultiplier: 0.90
+      MaxAbsorption: 0.5
+      ArmorToughness: -0.02
+      StepHeight: 1.5
+  Lore:
+    - '&6&l&m*&r &7better efficiency than vanilla tools'
+    - '&6&l&m*&r &bJokerSet-tools'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+    - '&3&l&m*&r &6&oSkill:&r &7haste mode'
+    - '&3&l&m*&r &7Crouching + Right Click&r &8»&r &bConsume 64 dirt to increase mining speed'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+  Enchantments:
+    - FIRE_ASPECT 1
+    - KNOCKBACK 1
+    - UNBREAKING 4
+    - EFFICIENCY 7
+    - SILK_TOUCH 1
+  Skills:
+    - skill{s=jokerskillshovel} ~onUse
+    - skill{s=jokerskillshovelfail} ~onFail

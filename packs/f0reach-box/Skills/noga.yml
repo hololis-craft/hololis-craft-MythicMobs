@@ -1,0 +1,98 @@
+# ねねちのメン限
+NenechiMemberOnly:
+  Skills:
+    - message{m="<b><red>[YouTube]</red></b> 桃鈴ねねが<gold>【メンバー限定】</gold>配信を始めました"} @PlayersInRing{min=0;max=25}
+    - delay 10
+    - sound{s=block.bell.use;v=1.0;repeat=5;repeatinterval=6} @PlayersInRing{min=0;max=25}
+    - totem{hs=true;hfs=0.01;yo=0;maxduration=35;onstartskill=NenechiMemberOnly-Warn;onendskill=NenechiMemberOnly-Attack;repeat=4;repeatinterval=55} @RandomLocationsNearOrigin{a=7;r=10;s=4.4;os=true}
+    - delay 220
+    - message{m="<b><red>[YouTube]</red></b> 桃鈴ねねの<gold>【メンバー限定】</gold>配信は終了しました"} @PlayersInRing{min=0;max=25}
+
+NenechiMemberOnly-Warn:
+  Skills:
+    - projectile{fo=true;g=-0.7;v=0;syo=0;sfo=0;hp=false;se=false;sb=false;ht=false;interval=3;maxduration=24;ontickskill=NenechiMemberOnly-WarnParticle} @self
+
+NenechiMemberOnly-WarnParticle:
+  Skills:
+    - particlering{p=dust_color_transition;color1=#ffc45f;color2=#ff4343;a=1;radius=2.2;points=50} @origin
+    - particleorbital{radius=2.2;points=10;t=20;hS=0.1;vS=0;i=1;particle=electric_spark} @origin
+
+NenechiMemberOnly-Attack:
+  Skills:
+    - particlering{p=end_rod;a=6;radius=2.2;points=80;hS=0.1;vS=0.1} @origin
+    - sudoskill{s=NenechiMemberOnly-AttackSound} @EntitiesInRingNearOrigin{min=0;max=10;target=players}
+    - sudoskill{s=NenechiMemberOnly-AttackActual} @EntitiesInRingNearOrigin{min=0;max=2.2;target=players}
+
+NenechiMemberOnly-AttackSound:
+  Skills:
+    - sound{s=block.anvil.place;volume=1.0}
+    - sound{s=block.end_portal.spawn;volume=1.0}
+
+NenechiMemberOnly-AttackActual:
+  Skills:
+    - message{m="<b><gold>NogaNekko</gold></b>: 邪魔すんじゃねえ！BANするぞ！！！"}
+    - delay 2
+    - damage{amount=1000;ia=true;pi=true;repeat=5;repeatinterval=2}
+    - effect:lightning{localized=true}
+
+# ブラウンコ
+BrownPoop:
+  Skills:
+    - message{m="<b><gold>NogaNekko</gold></b>: 面白いこといいま〜〜す"} @PlayersInRing{min=0;max=25}
+    - delay 20
+    - message{m="<b><gold>NogaNekko</gold></b>: 茶色いウンコ、ブラウンコｗ"} @PlayersInRing{min=0;max=25}
+    - runAIGoalSelector{g=clear}
+    - particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @origin
+    - sound{s=entity.generic.splash;v=1.0;repeat=5;repeatinterval=6} @PlayersInRing{min=0;max=25}
+    - sound{s=entity.splash_potion.throw;p=0.80;v=1.0;repeat=5;repeatinterval=20} @PlayersInRing{min=0;max=25}
+    - skill{s=BrownPoop-Projectile;repeat=5;repeatinterval=20} @randomRingPoint{r=30;p=50;a=10}
+    - delay 110
+    - runAIGoalSelector{g=meleeattack}
+
+BrownPoop-Projectile:
+  Skills:
+    - particleline{p=wax_on;hS=0.1;vS=0.1;amount=1;syo=1.0}
+    - delay 5
+    - effect:itemspray{amount=3;item=DIRT;d=15;repeat=8;repeatinterval=1} @casterLocation{yoffset=3.0}
+    - projectile{v=24;ontickskill=BrownPoop-Tick;onhitskill=BrownPoop-Hit;onhitblockskill=BrownPoop-End;hfs=1.0;g=0.2;vO=0.1;bounces=true;hR=0.6;vR=1.8;bullet=ITEM;material=SPLASH_POTION}
+
+BrownPoop-Tick:
+  Skills:
+    - particle{p=block;material=DIRT;hS=0.03;vS=0.03;amount=5} @origin
+
+BrownPoop-Hit:
+  Skills:
+    - damage{amount=4}
+    - sound{s=entity.splash_potion.break;v=1.0}
+    - particle{p=entity_effect;color=#7a2100;amount=20;hs=0.5;vs=0.5} @origin
+    - potion{type=SLOWNESS;duration=100;level=1} 0.1
+    - potion{type=WEAKNESS;duration=100;level=0} 0.1
+    - potion{type=POISON;duration=100;level=0} 0.3
+  KillMessage:
+    - '<b><gold>NogaNekko</gold></b>のブラウンコの臭さに<player>はショック死した'
+BrownPoop-End:
+  Skills:
+    - blockMask{r=3;m=GRAY_TERRACOTTA;na=false;d=20}
+
+# ねっ子限定
+CarrotBomb:
+  Skills:
+    - runAIGoalSelector{g=clear}
+    - potion{type=SLOWNESS;level=100;duration=100} @self
+    - totem{hs=true;hfs=0.01;yo=0;maxduration=60;interval=8;ontickskill=CarrotBomb-Warn;onendskill=CarrotBomb-Immune} @RandomLocationsNearOrigin{a=7;r=10;s=4.4;os=true}
+    - delay 70
+    - damage{amount=40;ia=true;pi=true;repeat=5;repeatinterval=2} @PlayersInRing{min=0;max=12}
+    - delay 30
+    - runAIGoalSelector{g=meleeattack}
+
+CarrotBomb-Warn:
+  Skills:
+    - effect:particlering{points=30;radius=2.0;particle=totem;hS=0.1;vS=0.1} @origin
+    - effect:particlering{points=30;radius=1.7;particle=totem;hS=0.1;vS=0.1} @origin
+    - delay 4
+    - effect:itemspray{amount=1;item=CARROT;d=25;repeat=3;repeatinterval=3;force=0.05} @origin{yoffset=5.0}
+    - potion{type=RESISTANCE;duration=80;level=255} @EntitiesInRingNearOrigin{min=0;max=2.0;target=players}
+
+CarrotBomb-Immune:
+  Skills:
+    - potion{type=RESISTANCE;duration=80;level=255} @EntitiesInRingNearOrigin{min=0;max=2.0;target=players}

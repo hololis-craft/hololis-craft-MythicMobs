@@ -1,0 +1,28 @@
+divinehealingpotions:
+  Id: potion
+  Display: '&8&l&ka&r&7&l&m.,;:;,.&f&l&m=(&c&m&l*&r&f&l&n&m&ka&r&c&m&l*&r&c&lD&r&f&li&r&c&lv&r&f&li&r&c&ln&r&f&le&r&8&m=&r&c&lh&r&f&le&r&c&la&r&f&ll&r&c&li&r&f&ln&r&c&lg&r&c&m&l*&r&f&m&l&n&ka&r&c&m&l*&r&f&m&l)=&r&7&m&l.,;:;,.&r&8&m&l&ka'
+  Options:
+    Color: 239,103,216
+  PotionEffects:
+    - REGENERATION 800 4
+    - SATURATION 40 3
+    - ABSORPTION 300 3
+    - HEALTH_BOOST 600 4
+    - GLOWING 820 1
+    - SPEED 140 3
+    - WEAKNESS 1000 2
+    - MINING_FATIGUE 400 1
+    - NAUSEA 60 1
+    - BLINDNESS 60 1
+    - FIRE_RESISTANCE 300 1
+  Enchantments:
+    - VANISHING_CURSE
+  Hide:
+    - ENCHANTS
+  Lore:
+    - '&3&l&m*&r &e&l&oAn incredibly potent healing potion'
+    - '&3&l&m*&r &6F&r&ee&r&6a&r&er&r&6l&r&ee&r&6s&r&es&r&7Pack'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'
+    - '&6Able to cure even tremendous wounds.'
+    - '&6&lDetails:&r&c&m&l&ka&r&lSuper Regenerations&r&c&l&m&ka&r'
+    - '&f&l&m*---=---=---=---=---=---=---=---*'

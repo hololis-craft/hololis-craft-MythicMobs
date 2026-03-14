@@ -1,0 +1,35 @@
+JokerSword:
+  Id: 'iron_sword'
+  Display: '<gradient:#FFA500:#00FFFF>&l&m* === * &r<#00FF7F>&m&kaaa&r <gradient:#00FFFF:#0000FF>&lJokerset&r &6&l&ka&r <gradient:#00FFFF:#0000FF>&lSword&r <#00FF7F>&l&m&kaaa &r<gradient:#00FFFF:#FFA500>&l&m * === *&r'
+  Material: IRON_SWORD
+  Attributes:
+    mainhand:
+      Damage: 5.3
+      Health: 5
+      AttackSpeed: 0.07
+      MovementSpeed: 0.03
+  Lore:
+    - '&6&l&m*&r &7Debilitating Sword'
+    - '&6&l&m*&r &bJokerSet'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+    - '&3&l&m*&r &6&oSkill:&r &7Debilitating Monsters'
+    - '&3&l&m*&r &6&oSkill:&r &7Strengthen Yourself'
+    - '&3&l&m*&r &7Attack&r &8»&r &bWeaken the monster'
+    - '&3&l&m*&r &7Crouching + Right Click&r &8»&r &bConsumes 5 &c♥&b to strengthen yourself'
+    - '<gradient:#FFA500:#7FFFD4>&l&m*===*===*===*===*===*===*===*===*===*===*'
+  Enchantments:
+    - SHARPNESS 4
+    - SMITE 3
+    - BANE_OF_ARTHROPODS 4
+    - SWEEPING_EDGE 3
+    - FIRE_ASPECT 2
+    - KNOCKBACK 1
+    - LOOTING 3
+    - UNBREAKING 5
+    - MENDING 1
+  Skills:
+    - skill{s=jokerskill1} ~onAttack
+    - effect:particles{p=dragon_breath;amount=14;y=0.9;hs=0.3;vs=0.3} @self ~onTimer:35
+    - effect:particles{p=enchant;amount=25;y=0.9;hs=0.3;vs=0.3} @self ~onTimer:35
+    - effect:particles{p=glow;amount=10;y=0.9;hs=0.3;vs=0.3} @self ~onTimer:105
+    - skill{s=jokerskillstrong} ~onUse

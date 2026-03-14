@@ -1,3 +1,5 @@
+#デバッグ用スキル
+#デバッグ用アイテムにて使用されるスキル
 testskillchoose:
   Skills:
     - randomskill{s=divinityport}

@@ -1,0 +1,12 @@
+suisei_train:
+  Id: minecart
+  Display: '<aqua>すいせい列車</aqua>'
+  Lore:
+    - '<aqua>すいせい列車、しゅっしゅっしゅ〜</aqua>'
+    - '<white>一瞬地元が見えたorz</white>'
+    - ''
+    - '相手を追いかけるすいせい列車を召喚する'
+  Enchantments:
+    - KNOCKBACK 4
+  Skills:
+    - skill{skill=suisei_train_fire} ~onUse

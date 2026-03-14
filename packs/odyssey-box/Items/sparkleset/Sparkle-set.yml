@@ -1,0 +1,84 @@
+Sparklesethelmet:
+  Id: leather_helmet
+  Display: '&e&l&m{&ka&r&e&l&m}&r&6&l&m{&ka&r&6&l&m}&r&f&l&nSparkle&r&7&l&nset&r &f&l&ka&r &f&l&nHelmet&r&6&l&m{&r&6&l&m&ka&r&6&m&l}&r&e&m&l{&ka&r&e&m&l}&r'
+  Attributes:
+    Head:
+      Health: 2
+      Armor: 2
+      ArmorToughness: 1
+  Enchantments:
+    - PROTECTION 2
+    - BLAST_PROTECTION 1
+    - PROTECTION_FIRE 2
+    - PROJECTILE_PROTECTION 2
+    - RESPIRATION 2
+    - THORNS 1
+    - UNBREAKING 7
+    - MENDING 1
+  Options:
+    Color: 212,185,33
+  Lore:
+    - '&f&l&m{&r&eOdyssey-Armor-Packs&r&f&l&m}&r'
+  Skills:
+    - effect:particles{p=mobSpell;amount=4;speed=0;color=#D4FF4E;y=0.9;hs=0.3;vs=0.3} @self ~onTimer:35
+Sparklesetchestplate:
+  Id: leather_chestplate
+  Display: '&e&l&m{&ka&r&e&l&m}&r&6&l&m{&ka&r&6&l&m}&r&f&l&nSparkle&r&7&l&nset&r &f&l&ka&r &f&l&nChestplate&r&6&l&m{&r&6&l&m&ka&r&6&m&l}&r&e&m&l{&ka&r&e&m&l}&r'
+  Attributes:
+    Chest:
+      Health: 2
+      Armor: 4
+      ArmorToughness: 1
+  Enchantments:
+    - PROTECTION 3
+    - BLAST_PROTECTION 2
+    - THORNS 4
+    - UNBREAKING 5
+    - MENDING 1
+  Options:
+    Color: 212,185,33
+  Lore:
+    - '&f&l&m{&r&eOdyssey-Armor-Packs&r&f&l&m}&r'
+  Skills:
+    - effect:particles{p=mobSpell;amount=4;speed=0;color=#D4FF4E;y=0.6;hs=0.3;vs=0.3} @self ~onTimer:35
+Sparklesetleggings:
+  Id: leather_leggings
+  Display: '&e&l&m{&ka&r&e&l&m}&r&6&l&m{&ka&r&6&l&m}&r&f&l&nSparkle&r&7&l&nset&r &f&l&ka&r &f&l&nLeggings&r&6&l&m{&r&6&l&m&ka&r&6&m&l}&r&e&m&l{&ka&r&e&m&l}&r'
+  Attributes:
+    Legs:
+      Health: 1
+      Armor: 2.5
+      ArmorToughness: 1
+  Enchantments:
+    - PROTECTION 2
+    - SWIFT_SNEAK 1
+    - THORNS 1
+    - UNBREAKING 8
+    - MENDING 1
+  Options:
+    Color: 212,185,33
+  Lore:
+    - '&f&l&m{&r&eOdyssey-Armor-Packs&r&f&l&m}&r'
+  Skills:
+    - effect:particles{p=mobSpell;amount=4;speed=0;color=#D4FF4E;y=0.3;hs=0.3;vs=0.3} @self ~onTimer:35
+Sparklesetboots:
+  Id: leather_boots
+  Display: '&e&l&m{&ka&r&e&l&m}&r&6&l&m{&ka&r&6&l&m}&r&f&l&nSparkle&r&7&l&nset&r &f&l&ka&r &f&l&nBoots&r&6&l&m{&r&6&l&m&ka&r&6&m&l}&r&e&m&l{&ka&r&e&m&l}&r'
+  Attributes:
+    Boots:
+      Health: 1
+      Armor: 1.5
+      ArmorToughness: 1
+      MovementSpeed: 0.07
+  Enchantments:
+    - FEATHER_FALLING 3
+    - SOUL_SPEED 1
+    - DEPTH_STRIDER 1
+    - UNBREAKING 5
+    - MENDING 1
+  Options:
+    Color: 212,185,33
+  Lore:
+    - '&f&l&m{&r&eOdyssey-Armor-Packs&r&f&l&m}&r'
+  Skills:
+    - effect:particles{p=mobSpell;amount=4;speed=0;color=#D4FF4E;y=0;hs=0.3;vs=0.3} @self ~onTimer:35

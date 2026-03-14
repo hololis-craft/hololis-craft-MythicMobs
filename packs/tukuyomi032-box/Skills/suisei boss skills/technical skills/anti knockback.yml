@@ -1,3 +1,4 @@
+#ノックバック耐性パッシブスキル
 antiknockback:
   Skills:
     - delay 1

@@ -1,0 +1,4 @@
+Nagi_lemon-eat:
+  Skills:
+    - potion{type=speed;l=1;d=600;force=true} @self
+    - potion{type=jump_boost;l=0;d=600;force=true} @self

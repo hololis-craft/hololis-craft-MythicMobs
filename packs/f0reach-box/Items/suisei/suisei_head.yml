@@ -1,0 +1,16 @@
+suisei_head:
+  Id: nether_star
+  Display: '&bすいちゃんのハート'
+  Attributes:
+    MainHand:
+      MovementSpeed: 0.15
+      Health: 6
+  Enchantments:
+    - UNBREAKING 1
+  Skills:
+    - skill{s=suisei_head_skill} ~onUse
+suiseihead:
+  Id: player_head
+  Display: 'すいちゃんの頭'
+  Options:
+    Player: SUISEI_HOSIMATI

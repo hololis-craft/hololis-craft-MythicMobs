@@ -1,0 +1,43 @@
+NogaArmorHead1:
+  Id: player_head
+  Options:
+    Player: NogaNekko
+NogaArmorChest1:
+  Id: leather_chestplate
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+    Color: 255,123,6
+NogaArmorLegs1:
+  Id: leather_leggings
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+    Color: 255,174,46
+NogaArmorFeet1:
+  Id: leather_boots
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+    Color: 255,225,6
+NogaWeapons1:
+  Id: netherite_axe
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+NogaWeapons2:
+  Id: golden_sword
+  Enchantments:
+    - UNBREAKING 1
+  Options:
+    Unbreakable: true
+
+NogaTest:
+  Id: stick
+  Display: 'NOGA TEST'
+  Skills:
+    - skill{s=NenechiMemberOnly} ~onUse

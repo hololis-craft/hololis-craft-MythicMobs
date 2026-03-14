@@ -1,3 +1,5 @@
+#ボス第1形態にて残りHPが400(ハート２００個分)と等しい場合にトーテムをオフハンドに自動装備する
+#トーテムが割れて第2形態に移行したという風にプレイヤーに見せるため
 suiseisavemylife:
   Conditions:
     - stance{stance=suisei-second-phase-like} false

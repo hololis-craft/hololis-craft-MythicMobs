@@ -1,0 +1,29 @@
+Nagi_lemon:
+  Id: player_head
+  Display: '&b&l凪&r&e&eレモン'
+  Lore:
+    - '&f&l&n右クリック(使用)'
+    - ' &b&l>> 食べる'
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTU3ZmQ1NmNhMTU5Nzg3NzkzMjRkZjUxOTM1NGI2NjM5YThkOWJjMTE5MmM3YzNkZTkyNWEzMjliYWVmNmMifX19
+  Consumable:
+    ConsumeSeconds: 0.7
+    HasParticles: true
+    Animation: eat
+  Food:
+    Nutrition: 6
+    Saturation: 6
+    CanAlwaysEat: true
+  Recipes:
+    Type: SHAPED
+    Amount: 3
+    IngredientsLeftover:
+      - apple
+    Ingredients:
+      - AIR | YELLOW_WOOL | AIR
+      - YELLOW_WOOL | APPLE  | YELLOW_WOOL
+      - AIR | YELLOW_WOOL | AIR
+    CraftSkills:
+      - fakelightning @self
+  Skills:
+    - skill{s=Nagi_lemon-eat} ~onConsume

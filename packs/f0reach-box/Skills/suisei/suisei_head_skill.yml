@@ -1,0 +1,12 @@
+suisei_head_skill:
+  Cooldown: 3
+  Conditions:
+    - crouching false
+  Skills:
+    - projectile{bulletType=ITEM;material=suiseihead;onTick=shsProTick;onEnd=shsProEnd;onHit=shsProEnd;v=10;i=1;hR=2;vR=1;StopAtBlock=true;HitNonPlayers=false;vO=0.5;hO=16;g=0.4;bulletViewDistance=150;MaxDuration=200;mr=200;bulletCulling=false;bulletCullingHeight=100;bulletCullingWidth=100} @Cone{angle=360;points=45;range=70;rotation=10}
+shsProTick:
+  Skills:
+    - effect:particlesphere{p=electric_spark;a=2;r=0.6;y=0.25} @origin
+shsProEnd:
+  Skills:
+    - damage{a=20;ia=false;preventimmunity=true;pk=true} @ENO{r=5}

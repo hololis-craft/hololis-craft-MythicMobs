@@ -1,0 +1,61 @@
+Ouroboros:
+  Mobtype: skeleton
+  Display: '&2☽&r&a&lO&r&e&lu&a&lr&r&e&lo&r&a&lb&r&e&lo&r&a&lr&r&e&lo&r&a&ls&r&6☽&r'
+  Health: 250000
+  Modules:
+    ThreatTable: true
+  Equipment:
+    - Ouroboroshead1:4
+    - Ouroboroschest1:3
+    - Ouroborosleg1:2
+    - Ouroborosboots1:1
+    - Ouroborosweapon2:0
+    - Ouroborosweapon1:5
+  Faction: boss
+  AIGoalSelectors:
+    - 0 clear
+    - 2 randomlookaround
+    - 3 randomstroll
+  AITargetSelectors:
+    - 0 clear
+  Options:
+    FollowRange: 120
+    AlwaysShowName: false
+    KnockbackResistance: 1
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    ShowHealth: true
+    Despawn: true
+    PreventItemPickup: true
+    Silent: true
+    PreventRandomEquipment: true
+    Persistent: true
+    RepeatAllSkills: true
+  KillMessages:
+    - '<target.name>は&2☽&r&a&lO&r&e&lu&a&lr&r&e&lo&r&a&lb&r&e&lo&r&a&lr&r&e&lo&r&a&ls&r&6☽&rによって殺害された'
+  Skills:
+    - effect:particlesphere{p=reddust;color=#FFFFFF;a=20;s=0.5;r=2} @self ~onTimer:5
+    - effect:particlesphere{p=reddust;color=#FFFF55;a=20;s=0.5;r=2.45} @self ~onTimer:5
+  DamageModifiers:
+    - WITHER 0
+    - ENTITY_EXPLOSION 0
+    - BLOCK_EXPLOSION 0
+    - FALL 0
+    - SUICIDE 0
+    - DROWNING 0
+    - LIGHTNING 0
+    - STARVATION 0
+    - FALLING_BLOCK 0
+    - THORNS 0
+    - LAVA 0
+    - MELTING 0
+    - FIRE_TICK 0
+    - FIRE 0
+    - SUFFOCATION 0
+    - CONTACT 0
+  BossBar:
+    Enabled: true
+    Title: '&f&m&n&l={&ka&r&6&m&l&n=&2&m&n&l=&a&m&n&l=&r<gradient:#00E700:#F89400><bold><strikethrough> .,;&r<gradient:#00aa00:#00E700><bold><underlined>(☽Ouroboros☽)<strikethrough>;,.&r&a&m&l&n=&2&m&n&l=&6&m&n&l=&r&f&m&l&n&ka&r&f&m&n&l}='
+    Range: 360
+    Color: GREY
+    Style: SEGMENTED_10

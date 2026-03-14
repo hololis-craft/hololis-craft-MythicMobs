@@ -1,3 +1,4 @@
+#ボス本体の装備の定義
 suiArmorHead1:
   Id: diamond_helmet
   Enchantments:

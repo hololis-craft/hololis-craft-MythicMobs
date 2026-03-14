@@ -1,0 +1,104 @@
+suisei-concept-outfit-helmet:
+  Id: leather_helmet
+  MaxDurability: 265
+  Display: '<#3ab3da>&m&l&k.;.&r&b&m&l={&r<gradient:#54AFF0:#1F26E6><underlined><bold>星街すいせい-概念ヘルメット</gradient>&b&m&l}=&r<#3ab3da>&m&l&k.;.'
+  Attributes:
+    Head:
+      Armor: 2.5
+      MovementSpeed: 0.02
+      Health: 1
+      SafeFallDistance: 1
+  Options:
+    Color: 58,179,218
+    Trim:
+      Material: diamond
+      Pattern: silence
+  Lore:
+    - '<#3ab3da>&m&l=&r&f&l星街すいせい-概念衣装セット(頭)'
+    - '<#3ab3db>&m&l=&r&7追加効果 &r&f&l))&r &7&n変装能力'
+    - '<#3ab3da>&m&l=&r&fShift+左クリック &l>>&r &f&n本人に一時変装'
+  Enchantments:
+    - UNBREAKING 8
+    - PROTECTION 2
+    - AQUA_AFFINITY 1
+    - RESPIRATION 3
+    - MENDING 1
+  Skills:
+    - skill{s=disguise-suisei} @self ~onSwing
+
+suisei-concept-outfit-chestplate:
+  Id: leather_chestplate
+  MaxDurability: 385
+  Display: '<#9d9d97>&m&l&k.;.&r&b&m&l={&r<gradient:#1F26E6:#54AFF0><underlined><bold>星街すいせい-概念チェストプレート</gradient>&b&m&l}=&r<#9d9d97>&m&l&k.;.'
+  Attributes:
+    Chest:
+      Armor: 7
+      MovementSpeed: 0.01
+      Health: 2
+      MaxAbsorption: 2
+  Options:
+    Color: 157,157,151
+    Trim:
+      Material: diamond
+      Pattern: bolt
+  Lore:
+    - '<#3ab3da>&m&l=&r&f&l星街すいせい-概念衣装セット(胸)'
+    - '<#3ab3db>&m&l=&r&7追加効果 &r&f&l))&r &7&n変装能力'
+    - '<#3ab3da>&m&l=&r&fShift+左クリック &l>>&r &f&n本人に一時変装'
+  Enchantments:
+    - UNBREAKING 5
+    - PROJECTILE_PROTECTION 2
+    - FIRE_PROTECTION 2
+    - MENDING 1
+  Skills:
+    - skill{s=disguise-suisei} @self ~onSwing
+
+suisei-concept-outfit-leggings:
+  Id: leather_leggings
+  MaxDurability: 361
+  Display: '<#f9fffe>&m&l&k.;.&r&b&m&l={&r<gradient:#54AFF0:#1F26E6><underlined><bold>星街すいせい-概念レギンス</gradient>&b&m&l}=&r<#f9fffe>&m&l&k.;.'
+  Attributes:
+    Legs:
+      Armor: 5.5
+      Health: 2
+      MovementSpeed: 0.02
+  Options:
+    Color: 249,255,254
+    Trim:
+      Material: diamond
+      Pattern: coast
+  Lore:
+    - '<#3ab3da>&m&l=&r&f&l星街すいせい-概念衣装セット(脚)'
+    - '<#3ab3db>&m&l=&r&7追加効果 &r&f&l))&r &7&n変装能力'
+    - '<#3ab3da>&m&l=&r&fShift+左クリック &l>>&r &f&n本人に一時変装'
+  Enchantments:
+    - UNBREAKING 8
+    - PROTECTION 4
+    - MENDING 1
+  Skills:
+    - skill{s=disguise-suisei} @self ~onSwing
+
+suisei-concept-outfit-boots:
+  Id: iron_boots
+  MaxDurability: 313
+  Display: '&f&m&l&k.;.&r&b&m&l={&r<gradient:#1F26E6:#54AFF0><underlined><bold>星街すいせい-概念ブーツ</gradient>&b&m&l}=&r&f&m&l&k.;.'
+  Attributes:
+    Feet:
+      Armor: 2.5
+      Health: 1
+      StepHeight: 0.5
+  Options:
+    Trim:
+      Material: diamond
+      Pattern: ward
+  Lore:
+    - '<#3ab3da>&m&l=&r&f&l星街すいせい-概念衣装セット(足)'
+    - '<#3ab3db>&m&l=&r&7追加効果 &r&f&l))&r &7&n変装能力'
+    - '<#3ab3da>&m&l=&r&fShift+左クリック &l>>&r &f&n本人に一時変装'
+  Enchantments:
+    - UNBREAKING 7
+    - FEATHER_FALLING 2
+    - DEPTH_STRIDER 3
+    - MENDING 1
+  Skills:
+    - skill{s=disguise-suisei} @self ~onSwing

@@ -1,3 +1,4 @@
+#宙に浮遊し着地と同時にダメージ判定のある衝撃波を周囲25マスに放つ
 strikewave1:
   Skills:
     - throw{velocity=15;velocityY=5} @PIR{r=9}

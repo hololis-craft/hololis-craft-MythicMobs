@@ -1,0 +1,24 @@
+suisei_train_ambient:
+  Skills:
+    - particle{p=reddust;amount=5;speed=1;spread=0.4;color=#4abcf1;y=-1} @origin
+    - effect:sound{s=entity.minecart.riding;v=0.2;p=0.5;cooldown=0.2} @origin
+
+suisei_train_hit:
+  Skills:
+    - particle{p=explosion;spread=5.0}
+    - damage{amount=25;damagecause=ENTITY_EXPLOSION}
+    - sound{s=entity.generic.explode;v=0.5;p=1.0}
+    - sound{s=entity.lightning_bolt.thunder;v=0.5;p=1.0}
+
+suisei_train_star_ambient:
+  Skills:
+    - particle{p=end_rod;amount=2;speed=0.1;spread=0.2} @origin
+
+suisei_train_fire_actual:
+  Skills:
+    - missile{bullettype=ITEM;bulletmaterial=NETHER_STAR;velocity=20;ontick=suisei_train_star_ambient;stopatentity=true;stopatblock=true;StartYOffset=20;gravity=0} @EIR{r=10}
+    - missile{bullettype=mob;mob=suisei_train_base;ontick=suisei_train_ambient;onhit=suisei_train_hit;velocity=16;interval=1;hR=1;vR=1;stopatblock=true;hugsurface=true;gravity=0} @EIR{r=10}
+
+suisei_train_fire:
+  Skills:
+    - skill{skill=suisei_train_fire_actual} @MobsInRadius{radius=80}
